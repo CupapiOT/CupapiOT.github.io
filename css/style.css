@@ -265,6 +265,11 @@ p {
   color: #575757;
 }
 
+section h1 {
+  font-size: 2em;
+  margin: 0.67em 0
+}
+
 .view-link-button {
   background: transparent;
   border-radius: 1.25em;
@@ -285,7 +290,7 @@ p {
 
 #main-column {
   margin-inline: auto auto;
-  margin-top: 12vh;
+  margin-top: min(6em, min(12vh, 16em));
   width: var(--central-width);
 }
 
@@ -294,7 +299,7 @@ p {
   top: 0;
   background: #ffffff;
   width: 100%;
-  height: max(1.25em, 6vh);
+  height: clamp(1.25em, 6vh, 4em);
   display: flex;
   justify-content: center;
   align-items: center;
