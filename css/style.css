@@ -307,15 +307,23 @@ section h1 {
   overflow: hidden;
 }
 
-#top-nav-content {
+#top-nav__links {
   width: calc(var(--central-width));
   justify-content: right;
 }
 
-#top-nav-content p {
+#top-nav__links p {
   color: black;
   margin-right: auto;
   margin-left: 1em;
+}
+
+#top-nav__links ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 #top-nav p {
@@ -336,7 +344,7 @@ section h1 {
   background: #dddddd;
 }
 
-#top-nav-content {
+#top-nav__links {
   display: flex;
   flex-direction: row;
   max-width: 100%;
