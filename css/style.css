@@ -358,12 +358,14 @@ section h1 {
 }
 
 #home-section__intro {
+  margin-right: 2em;
   display: flex;
   flex-direction: column;
 }
 
 #home-section__intro-text {
   overflow: auto;
+  margin-right: 1em;
 }
 
 #home-section__profile-photo {
