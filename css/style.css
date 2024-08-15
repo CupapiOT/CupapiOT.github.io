@@ -252,7 +252,7 @@ textarea {
 }
 
 /*
- * Styling
+ * General Styling
  */
 
 body {
@@ -267,8 +267,16 @@ p {
 
 section h1 {
   font-size: 2em;
-  margin: 0.67em 0
+  margin: 0.625em 0
 }
+
+section:not(#home-section) {
+  margin-bottom: 6em;
+}
+
+/*
+ * Class Styling
+ */
 
 .view-link-button {
   background: transparent;
@@ -288,9 +296,12 @@ section h1 {
   box-shadow: 0 0 1.25em 0 #88888844;
 }
 
+/*
+ * ID Styling
+ */
+
 #main-column {
   margin-inline: auto auto;
-  margin-top: min(6em, min(12vh, 16em));
   width: var(--central-width);
 }
 
@@ -355,6 +366,7 @@ section h1 {
 #home-section {
   display: flex;
   flex-direction: row;
+  margin-top: min(8em, 12vh);
   height: 60vh;
 }
 
@@ -392,20 +404,27 @@ section h1 {
   background: #ffffff;
   box-shadow: 0.125em 0.125em 0.0625em 0.0625em #88888844, -0.0625em -0.0625em 0.03125em 0.03125em #eeeeeedd;
   word-wrap: break-word;
-  overflow: hidden;
+  overflow: auto;
   margin-inline: 0.5em 0.5em;
-}
-
-#first-project {
-  margin-left: 0;
-}
-
-#third-project {
-  margin-right: 0;
+  transition: box-shadow 0.3s ease, transform 0.3s ease, z-index 1s;
 }
 
 .projects-section__list-item:hover {
   box-shadow: 0.25em 0.25em 0.125em 0.125em #88888844, -0.125em -0.125em 0.03125em 0.03125em #eeeeeeee;
+  transform: scale(1.1);
+  z-index: 3;
+}
+
+.projects-section__list-item:not(:hover)  {
+  z-index: 1;
+}
+
+.projects-section__list-item:first-child {
+  margin-left: 0;
+}
+
+.projects-section__list-item:last-child {
+  margin-right: 0;
 }
 
 .projects-section__list-item figure {
