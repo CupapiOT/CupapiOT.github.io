@@ -4,8 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Sample Portfolio Website</title>
-  <link rel="stylesheet" href="css/style.css">
+  <title>Cupapi</title>
+  <link rel="stylesheet" href="css/style-2.css">
   <meta name="description" content="A sample portfolio website for my school assignment.">
 
   <meta property="og:title" content="Sample Portfolio Website">
@@ -16,106 +16,79 @@
   <meta property="og:image:alt" content="">
   <meta property="og:locale" content="en">
 
-  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="icon" href="/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="icon.png">
 
   <link rel="manifest" href="site.webmanifest">
   <meta name="theme-color" content="#fafafa">
 </head>
-
 <body>
-  <header id="top-nav">
-    <nav id="top-nav__links">
-      <p>&copy;Cupapi</p>
-      <ul>
-        <li><a href="#main-column">Home</a></li>
-        <li><a href="#projects-section">Projects</a></li>
-        <li><a href="#about-section" style="margin-right: 1em">About</a></li>
-        <li><a href="#contact-section" style="margin-right: 1em">Contact</a></li>
-      </ul>
+  <header>
+    <nav id="nav-bar__page-links">
+
     </nav>
   </header>
-
-  <main id="main-column">
+  <main>
     <section id="home-section">
-      <div id="home-section__intro">
-        <h1>Hello! I'm Cupapi, a high school student in Indonesia.</h1>
-        <div id="home-section__intro-text">
-          <p>
-            I am currently working on this website for an assignment I have been given by my teacher.
-            <br><br> There isn't much to see here right now, I do apologize for that, but it will be filled in sooner or later.
-            <br><br> My hobbies include programming, and writing, I guess? I don't really do all that much. You could say that I'm looking for stuff to do.
-            <br><br> Here is ONE link to fill in the space below this text.
-          </p>
-        </div>
-        <a href="https://github.com/CupapiOT" target="_blank">
-          <button class="view-link-button">View GitHub</button>
-        </a>
+      <div id="home-section__intro-texts">
+        <h2>Hello, I'm</h2>
+        <h1>Cupapi</h1>
+        <h2>A programming-enthusiast highschooler in Indonesia</h2>
+        <button id="home-link-button">View Github</button>
       </div>
-      <figure style="margin: 0.5em 0; padding: 0">
-        <img id="home-section__profile-photo"
-             src="img/big-boi-pfp.png"
-             alt="A painting of a large cat as a sample profile."
-             width="364"
-             height="472">
-      </figure>
+      <div id="home-section__links">
+        <a>GitHub</a>
+        <a>LinkedIn</a>
+      </div>
     </section>
 
+
     <section id="projects-section">
-      <h1>Projects</h1>
-      <p style="margin-top: -0.75em">
-        Here are the projects I've done, or I'm currently working on:
-      </p>
-      <div id="projects-section__list">
-        <a class="projects-section__list-item" id="first-project" href="placeholder-project-page.html" target="_blank">
-          <figure>
-            <img src="img/Image-References-4.png" alt="Image References App">
-          </figure>
-          <header>
-            <h3>Image References App</h3>
-          </header>
-          <p>An app to help artists sketch using their own references.</p>
-        </a>
-        <a class="projects-section__list-item" id="second-project" href="placeholder-project-page.html" target="_blank">
-          <figure>
-            <img src="img/matrix-visualization.png" alt="Linear Transformations Visualizations">
-          </figure>
-          <header>
-            <h3>Animated Matrices Web App</h3>
-          </header>
-          <p>A tool to help visualize linear transformations in linear algebra.</p>
-        </a>
-        <a class="projects-section__list-item" id="third-project" href="placeholder-project-page.html" target="_blank">
-          <figure>
-            <img src="img/Portfolio-Site.png" alt="The Portfolio Site you're seeing right now">
-          </figure>
-          <header>
-            <h3>Personal Portfolio Site</h3>
-          </header>
-          <p>The website you're seeing right now &mdash; it's only for an assignment.</p>
-        </a>
+      <div id="projects-section__heading">
+        <h1>Projects</h1>
+        <p>Here are the projects I'm currently working on or did</p>
       </div>
+
+      <article class="projects-section__item">
+        <h2>Self-service Sketch-referencing App</h2>
+        <p>Placeholder</p>
+        <figure class="projects-section__item__photo">
+          <img src="" alt="">
+        </figure>
+      </article>
+
+      <article class="projects-section__item">
+        <h2>2D Matrix Transformation Visualizer</h2>
+        <p>Placeholder</p>
+        <figure class="projects-section__item__photo">
+          <img src="" alt="">
+        </figure>
+      </article>
+
+      <article class="projects-section__item">
+        <h2>Portfolio Site</h2>
+        <p>Placeholder</p>
+        <figure class="projects-section__item__photo">
+          <img src="" alt="">
+        </figure>
+      </article>
     </section>
 
     <section id="about-section">
-      <h1>About Me</h1>
       <p>
-        I’m Cupapi, a high school student from Indonesia with a keen interest in programming and writing. I’m currently working on this portfolio as part of an assignment. I enjoy writing working on coding projects in my spare time. This site will showcase my projects and give you a better idea of what I’m working on. Feel free to check out my work above!
+        Lorem ipsum dolor si amet.
       </p>
-    </section>
-
-
-    <section id="contact-section">
-      <h1>Contact Me</h1>
+      <figure>
+        <img src="" alt="">
+      </figure>
     </section>
   </main>
 
   <footer>
-    <br><br><br><br><br><br><br><br><br>
+    <p>Let's get in contact.</p>
+    <p><a href="mailto:cupapitheguy@gmail.com">cupapitheguy@gmail.com</a></p>
+    <p>&copy; 2024 by Cupapi</p>
   </footer>
-
-  <script src="js/app.js"></script>
 </body>
-
 </html>
