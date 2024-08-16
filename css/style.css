@@ -247,8 +247,8 @@ textarea {
  */
 
 :root {
-  --central-width: clamp(30em, 50%, 80em);
-  --light-mode-text-color: #575757
+  --light-mode-text-color: #575757;
+  --light-mode-background-color: #d4f6ff
 }
 
 /*
@@ -270,200 +270,28 @@ section h1 {
   margin: 0.625em 0
 }
 
-section:not(#home-section) {
-  margin-bottom: 6em;
+section {
+  width: 100%;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--light-mode-background-color);
 }
 
 /*
  * Class Styling
  */
 
-.view-link-button {
-  background: transparent;
-  border-radius: 1.25em;
-  border-width: 0.125em;
-  border-color: #75bbfb;
-  width: 10em;
-  height: 3em;
-  font-size: 1em;
-  color: #222222;
-  margin-top: 1em;
-  margin-bottom: 1em;
-}
-
-.view-link-button:hover {
-  color: black;
-  box-shadow: 0 0 1.25em 0 #88888844;
-}
-
 /*
  * ID Styling
  */
 
-#main-column {
-  margin-inline: auto auto;
-  width: var(--central-width);
-}
-
-#top-nav {
-  position: fixed;
-  top: 0;
-  background: #ffffff;
-  width: 100%;
-  height: clamp(1.25em, 6vh, 4em);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 -1.25em 1.25em 0.75em #55555545;
-  overflow: hidden;
-  z-index: 3;
-}
-
-#top-nav__links {
-  width: calc(var(--central-width));
-  justify-content: right;
-}
-
-#top-nav__links p {
-  color: black;
-  margin-right: auto;
-  margin-left: 1em;
-}
-
-#top-nav__links ul {
-  display: flex;
-  flex-direction: row;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-#top-nav p {
-  float: left;
-  margin-top: auto;
-  margin-bottom: auto;
-}
-
-#top-nav a {
-  float: right;
-  color: black;
-  text-decoration: none;
-  padding: 3vh 1.25em
-}
-
-#top-nav a:hover {
-  color: #222222;
-  background: #dddddd;
-}
-
-#top-nav__links {
-  display: flex;
-  flex-direction: row;
-  max-width: 100%;
-  margin-inline: auto;
-}
-
 #home-section {
   display: flex;
   flex-direction: row;
-  margin-top: min(8em, 12vh);
-  height: 60vh;
-}
-
-#home-section__intro {
-  margin-right: 2em;
-  display: flex;
-  flex-direction: column;
-}
-
-#home-section__intro-text {
-  overflow: auto;
-  margin-right: 1em;
-}
-
-#home-section__profile-photo {
-  border-radius: 4em;
-  margin-left: auto;
-  object-fit: cover;
-  height: 50vh;
-  box-shadow: 0 1.5em 1.25em 0.25em #88888844;
-}
-
-#projects-section__list {
-  display: flex;
-  flex-direction: row;
-  height: 18em;
-}
-
-.projects-section__list-item {
-  text-decoration: none;
-  color: black;
-  width: 100%;
-  height: 100%;
-  border-radius: 20px;
-  background: #ffffff;
-  box-shadow: 0.125em 0.125em 0.0625em 0.0625em #88888844, -0.0625em -0.0625em 0.03125em 0.03125em #eeeeeedd;
-  word-wrap: break-word;
-  overflow: auto;
-  margin-inline: 0.5em 0.5em;
-  transition: box-shadow 0.3s ease, transform 0.3s ease, z-index 1s;
-}
-
-.projects-section__list-item:hover {
-  box-shadow: 0.25em 0.25em 0.125em 0.125em #88888844, -0.125em -0.125em 0.03125em 0.03125em #eeeeeeee;
-  transform: scale(1.1);
-  z-index: 3;
-}
-
-.projects-section__list-item:not(:hover)  {
-  z-index: 1;
-}
-
-.projects-section__list-item:first-child {
-  margin-left: 0;
-}
-
-.projects-section__list-item:last-child {
-  margin-right: 0;
-}
-
-.projects-section__list-item figure {
-  position: relative;
-  top: 0;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  height: 60%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.projects-section__list-item img {
-  width: 100%;
-  height: auto;
-  display: block;
-  max-height: 100%;
-  object-fit: cover;
-}
-
-.projects-section__list-item figure::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  box-shadow: inset 0 -0.25em 0.5em rgba(0, 0, 0, 0.1),
-              inset 0 0.25em 0.5em rgba(256, 256, 256, 1),
-              inset 0.25em 0 0.25em rgba(256, 256, 256, 0.5),
-              inset -0.25em 0 0.25em rgba(256, 256, 256, 0.5);
-  pointer-events: none;
-  z-index: 2;
-}
-
-.projects-section__list-item header, .projects-section__list-item p {
-  margin-top : -0.5em;
-  padding-left: 1em;
-  padding-right: 1em;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--light-mode-background-color);
 }
