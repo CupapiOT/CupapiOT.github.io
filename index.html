@@ -16,7 +16,7 @@
   <meta property="og:image:alt" content="">
   <meta property="og:locale" content="en">
 
-  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" href="/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="icon.png">
 
@@ -24,30 +24,31 @@
   <meta name="theme-color" content="#fafafa">
 </head>
 <body>
-  <header>
-    <nav id="nav-bar__page-links">
-
-    </nav>
+  <header id="top-nav">
+  <nav id="top-nav__links">
+    <p>&copy;Cupapi</p>
+    <ul>
+      <li><a href="#container">Home</a></li>
+      <li><a href="#projects-section">Projects</a></li>
+      <li><a href="#about-section" style="margin-right: 1em">About</a></li>
+    </ul>
+  </nav>
   </header>
-  <main>
+
+  <main id="container">
     <section id="home-section">
       <div id="home-section__intro-texts">
         <h2>Hello, I'm</h2>
         <h1>Cupapi</h1>
-        <h2>A programming-enthusiast highschooler in Indonesia</h2>
-        <button id="home-link-button">View Github</button>
-      </div>
-      <div id="home-section__links">
-        <a>GitHub</a>
-        <a>LinkedIn</a>
+        <h2>a developer based in Indonesia.</h2>
       </div>
     </section>
 
+    <hr>
 
     <section id="projects-section">
       <div id="projects-section__heading">
-        <h1>Projects</h1>
-        <p>Here are the projects I'm currently working on or did</p>
+        <h1>Here are my Projects:</h1>
       </div>
 
       <article class="projects-section__item">
@@ -75,7 +76,7 @@
       </article>
     </section>
 
-    <section id="about-section">
+    <section class="hidden" id="about-section">
       <p>
         Lorem ipsum dolor si amet.
       </p>
