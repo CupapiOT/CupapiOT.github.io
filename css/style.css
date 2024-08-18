@@ -247,8 +247,28 @@ textarea {
  */
 
 :root {
-  --light-mode-text-color: #575757;
-  --light-mode-background-color: #d4f6ff
+  --text-color: #575757;
+  --background-color: #f8f8f8;
+  --gradient: linear-gradient(
+    90deg,
+    #0059ff,
+    #003cff,
+    blue,
+    #4000ff,
+    indigo,
+    #5c00bf,
+    #771eda,
+    #b700ff,
+    #e600ff,
+    #b700ff,
+    #771eda,
+    #7b00ff,
+    indigo,
+    #4000ff,
+    blue,
+    #003cff,
+    #0059ff
+  )
 }
 
 /*
@@ -259,10 +279,16 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Avenir Next Cyr Medium", "Arial", sans-serif;
+  display: grid;
+  grid-template-areas:
+    "main"
+    "footer";
+  grid-template-rows: 10fr 1fr;
+  background-color: var(--background-color);
 }
 
 p {
-  color: var(--light-mode-text-color);
+  color: var(--text-color);
 }
 
 section h1 {
@@ -275,9 +301,13 @@ section {
 }
 
 main {
-  display: flex;
-  flex-direction: column;
-  background-color: var(--light-mode-background-color);
+  display: grid;
+  grid-area: main;
+  grid-template-areas:
+    "home"
+    "home-extension"
+    "projects"
+    "about";
 }
 
 /*
@@ -289,9 +319,105 @@ main {
  */
 
 #home-section {
-  display: flex;
-  flex-direction: row;
+  grid-area: home;
+  display: grid;
+  grid-template-areas:
+    "nav-bar-padding"
+    "intro"
+    "links";
+  justify-items: center;
+  align-items: center;
+  grid-template-rows: 3fr 14fr 2fr;
   width: 100vw;
   height: 100vh;
-  background-color: var(--light-mode-background-color);
+}
+
+#home-section__introduction {
+  grid-area: intro;
+  translate: 0 -10%;
+}
+
+#home-section h1, #home-section h2 {
+  margin: 0;
+  text-align: center;
+}
+
+#home-section h1 {
+  font-size: 24em;
+  font-family: "Avenir Next Cyr Heavy", sans-serif;
+
+  background-image: var(--gradient);
+  background-clip: text;
+  color: transparent;
+  background-size: 400% 400%;
+  transition: background-position 1s;
+  animation: GradientAnimation 20s linear infinite;
+  animation-delay: 0s;
+}
+
+@keyframes GradientAnimation {
+  0% {background-position: 0 50%}
+  100% {background-position: 400% 50%}
+}
+
+#home-section h2 {
+  font-size: 4em;
+}
+
+#home-section h2:first-child {
+  margin-bottom: -1.5em;
+}
+
+#home-section h2:last-child {
+  margin-top: -1em;
+}
+
+#home-section-extension {
+  grid-area: home-extension;
+  padding-top: 5em;
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+}
+
+#home-section-extension h3 {
+  max-width: min(90%, 60ch);
+}
+
+#home-section-extension p {
+  max-width: min(70%, 45ch)
+}
+
+#home-section-extension h3 {
+  font-weight: normal;
+  margin-left: clamp(0.5em, 6vw, 10em);
+  font-size: 2.5em;
+}
+
+#home-section-extension p {
+  font-size: 1.5em;
+  text-align: right;
+  margin-right: 6vw;
+  margin-left: auto;
+}
+
+#projects-section {
+  grid-area: projects;
+}
+
+
+@media (max-width: 108em) {
+  #home-section h1 {
+    font-size: 22.2vw;
+  }
+  #home-section h2 {
+    font-size: 3.7vw;
+  }
+
+  #home-section-extension h3 {
+    font-size: max(1.1em, 2.32vw);
+  }
+
+  #home-section-extension p {
+    font-size: max(0.9em, 1.39vw);
+  }
 }
