@@ -253,14 +253,20 @@ textarea {
 }
 
 @font-face {
-  font-family: "AvenirNextCyr-Medium";
-  src: url("font/AvenirNextCyr-Medium.woff");
+  font-family: AvenirNextCyrMedium;
+  src: url("../font/AvenirNextCyr-Medium.woff2");
 }
 
 @font-face {
-  font-family: "AvenirNextCyr-Heavy";
-  src: url("font/AvenirNextCyr-Heavy.woff");
+  font-family: AvenirNextCyrHeavy;
+  src: url("../font/AvenirNextCyr-Heavy.woff2");
 }
+
+@font-face {
+  font-family: AvenirNextCyrDemi;
+  src: url("../font/AvenirNextCyr-Demi.woff2");
+}
+
 
 /*
  * General Styling
@@ -269,7 +275,7 @@ textarea {
 body {
   margin: 0;
   padding: 0;
-  font-family: "Avenir Next Cyr Medium", "Arial", sans-serif;
+  font-family: "AvenirNextCyrMedium", "Arial", sans-serif;
   display: grid;
   grid-template-areas:
     "main"
@@ -381,7 +387,7 @@ footer div a {
 }
 
 .projects-section__item__description h3 {
-  font-weight: bold;
+  font-family: "AvenirNextCyrDemi", "Arial", sans-serif;
   font-size: 2em;
   margin: 0
 }
@@ -445,7 +451,7 @@ footer div a {
 
 #home-section h1 {
   font-size: 24em;
-  font-family: "Avenir Next Cyr Heavy", sans-serif;
+  font-family: "AvenirNextCyrHeavy", "Impact", "Arial Black", sans-serif;
   --gradient: linear-gradient(
     90deg,
     #0059ff,
@@ -569,6 +575,39 @@ footer div a {
   display: flex;
   flex-direction: column;
   row-gap: 3em;
+}
+
+#about-section {
+  grid-area: about;
+  margin-inline: auto auto;
+  margin-top: 5em;
+  width: calc(var(--central-width) + 12vw);
+  padding: 1em;
+  border-radius: 2em;
+  background: white;
+
+  height: max-content;
+
+  display: grid;
+  grid-template-areas:
+  "profile-image descriptionx";
+}
+
+#about-section figure {
+  object-fit: cover;
+}
+
+#about-section figure img {
+  height: 30em;
+  border-radius: 2em;
+}
+
+#about-section div {
+  margin-right: auto;
+}
+
+#about-section h2 {
+  font-size: 3em;
 }
 
 @media (max-width: 108em) {
