@@ -26,12 +26,12 @@
 <body>
   <header class="glass" id="top-nav">
     <nav id="top-nav__links">
-      <p>&copy;Cupapi</p>
+      <p>Marvel</p>
       <ul>
         <li><a href="#container">Home</a></li>
-        <li><a href="#my-technologies-section" style="margin-right: 1em">Technologies</a></li>
-        <li><a href="#projects-section">Projects</a></li>
-        <li><a href="#about-section" style="margin-right: 1em">About</a></li>
+        <li><a href="#skills-section__anchor">Skills</a></li>
+        <li><a href="#projects-section__anchor">Projects</a></li>
+        <li><a href="#about-section__anchor">About</a></li>
       </ul>
     </nav>
   </header>
@@ -56,16 +56,42 @@
       <a href="#projects-section">View my work 👇</a>
     </section>
 
-    <section id="my-technologies-section">
-      <h2>My Skills</h2>
+    <div class="section-scroll-anchor" id="skills-section__anchor"></div>
+
+    <section id="skills-section">
+      <div class="line-with-text-container">
+        <div class="line"></div>
+        <h2 class="text-between-line">My Skills</h2>
+        <div class="line"></div>
+      </div>
+      <div id="skills-section__best-skill">
+        <p>I'm best at...</p>
+        <figure class="skills-icon-figure"><img class="skills-icon" src="img/python-icon.svg" alt="Python Logo"></figure>
+      </div>
+      <div id="skills-section__other-skills">
+        <p>But I can also do...</p>
+        <figure class="skills-icon-figure"><img class="skills-icon" src="img/html-5-logo-svgrepo-com.svg" alt="HTML5 Logo"></figure>
+        <figure class="skills-icon-figure"><img class="skills-icon" src="img/w3_css-official.svg" alt="CSS3 Logo"></figure>
+        <figure class="skills-icon-figure"><img class="skills-icon" src="img/logo-javascript.svg" alt="JavaScript Logo"></figure>
+      </div>
+      <div id="skills-section__tools">
+        <p>I also use...</p>
+        <figure class="skills-icon-figure"><img class="skills-icon" src="img/github-mark.svg" alt="GitHub Logo"></figure>
+      </div>
     </section>
 
     <section id="work-experience">
 
     </section>
 
+    <div class="section-scroll-anchor" id="projects-section__anchor"></div>
+
     <section id="projects-section">
-      <hr />
+      <div class="line-with-text-container">
+        <div class="line"></div>
+        <h2 class="text-between-line">Personal Projects</h2>
+        <div class="line"></div>
+      </div>
 
       <div id="projects-section__items-container">
         <article class="projects-section__item">
@@ -145,27 +171,34 @@
       </div>
     </section>
 
+    <div class="section-scroll-anchor" id="about-section__anchor"></div>
     <section id="about-section">
       <figure>
         <img src="img/big-boi-pfp-2.png" alt="A profile picture of me, with my face.">
       </figure>
       <div>
-        <h2>
-          About me
-        </h2>
-        <p>
-          I'm passionate about helping people and small businesses grow with elegant and intuitive sites, complete with domain and website hosting for their convenience.
-        </p>
+        <div>
+          <h2>
+            About me
+          </h2>
+          <p>
+            I'm passionate about helping people and small businesses grow with elegant and intuitive sites, complete with domain and website hosting for their convenience.
+          </p>
+        </div>
+
+        <hr>
+        <ul>
+          <li><a href="mailto:hellomarvelorleans@gmail.com">hellomarvelorleans@gmail.com</a></li>
+          <li><a>GitHub</a></li>
+          <li><a>LinkedIn</a></li>
+        </ul>
       </div>
+
     </section>
   </main>
 
   <footer>
-    <div>
-      <p>Let's connect!</p>
-      <p><a href="mailto:cupapitheguy@gmail.com"> ✉️ Email: cupapitheguy@gmail.com</a></p>
-      <p>&copy; 2024 Marvel Orleans</p>
-    </div>
+    &copy; Marvel Orleans 2024
   </footer>
 </body>
 </html>
