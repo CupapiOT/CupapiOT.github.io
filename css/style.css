@@ -133,7 +133,7 @@ textarea {
   margin: 0;
   overflow: visible;
   position: static;
-  #ffffff-space: inherit;
+  white-space: inherit;
   width: auto;
 }
 
@@ -209,7 +209,7 @@ textarea {
   }
 
   pre {
-    #ffffff-space: pre-wrap !important;
+    white-space: pre-wrap !important;
   }
 
   pre,
