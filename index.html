@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Cupapi</title>
-  <link rel="stylesheet" href="css/style-2.css">
+  <link rel="stylesheet" href="css/style.css">
   <meta name="description" content="A sample portfolio website for my school assignment.">
 
   <meta property="og:title" content="Sample Portfolio Website">
@@ -24,15 +24,16 @@
   <meta name="theme-color" content="#fafafa">
 </head>
 <body>
-  <header id="top-nav">
-  <nav id="top-nav__links">
-    <p>&copy;Cupapi</p>
-    <ul>
-      <li><a href="#container">Home</a></li>
-      <li><a href="#projects-section">Projects</a></li>
-      <li><a href="#about-section" style="margin-right: 1em">About</a></li>
-    </ul>
-  </nav>
+  <header class="glass" id="top-nav">
+    <nav id="top-nav__links">
+      <p>&copy;Cupapi</p>
+      <ul>
+        <li><a href="#container">Home</a></li>
+        <li><a href="#my-technologies-section" style="margin-right: 1em">Technologies</a></li>
+        <li><a href="#projects-section">Projects</a></li>
+        <li><a href="#about-section" style="margin-right: 1em">About</a></li>
+      </ul>
+    </nav>
   </header>
 
   <main id="container">
@@ -46,7 +47,7 @@
 
     <section id="home-section-extension">
       <h3>
-        Hey, Marvel Orleans here. 👋 I'm a highshooler in Indonesia with a passion in programming, AI, and writing short stories. I haven't got much experience, but I'm always open to trying out more things and gaining some.
+        Hey, Marvel Orleans here. 👋 I'm a highshooler in Indonesia with a passion in programming with Python, and AI. I haven't got much experience, but I'm always open to trying out more things and gaining some.
       </h3>
       <p>
         Need a simple website, but don't have the budget to hire a professional? Give me a call &mdash; I've got your back.
@@ -55,7 +56,13 @@
       <a href="#projects-section">View my work 👇</a>
     </section>
 
+    <section id="my-technologies-section">
+      <h2>My Skills</h2>
+    </section>
 
+    <section id="work-experience">
+
+    </section>
 
     <section id="projects-section">
       <hr />
@@ -69,13 +76,13 @@
             </div>
             <div class="projects-section__item__tags">
               <div class="projects-section__item__tag">
-                UI Design
+                Python, CustomTkinter
               </div>
               <div class="projects-section__item__tag">
                 Desktop App
               </div>
               <div class="projects-section__item__tag">
-                Python
+                Dec 2023
               </div>
             </div>
           </div>
@@ -94,13 +101,13 @@
             </div>
             <div class="projects-section__item__tags">
               <div class="projects-section__item__tag">
-                Education
+                Python, Dash, Plotly, NumPy
               </div>
               <div class="projects-section__item__tag">
-                Open Source
+                Web App
               </div>
               <div class="projects-section__item__tag">
-                Python
+                July 2024
               </div>
             </div>
           </div>
@@ -119,13 +126,13 @@
             </div>
             <div class="projects-section__item__tags">
               <div class="projects-section__item__tag">
-                Opportunities
+                HTML, CSS, JS
               </div>
               <div class="projects-section__item__tag">
-                Pure HTML, CSS, JS
+                Website
               </div>
               <div class="projects-section__item__tag">
-                UI/UX
+                Aug 2024
               </div>
             </div>
           </div>
@@ -133,25 +140,31 @@
             <img src="img/portfolio-site.png" alt="">
           </figure>
         </article>
+        <hr class="projects-section__horizontal-rule" />
+
       </div>
     </section>
 
     <section id="about-section">
-
-      <p>
-        Lorem ipsum dolor si amet.
-      </p>
       <figure>
-        <img src="" alt="">
+        <img src="img/big-boi-pfp-2.png" alt="A profile picture of me, with my face.">
       </figure>
+      <div>
+        <h2>
+          About me
+        </h2>
+        <p>
+          I'm passionate about helping people and small businesses grow with elegant and intuitive sites, complete with domain and website hosting for their convenience.
+        </p>
+      </div>
     </section>
   </main>
 
   <footer>
     <div>
       <p>Let's connect!</p>
-      <p><a href="mailto:cupapitheguy@gmail.com"> Email: cupapitheguy@gmail.com</a></p>
-      <p>&copy; 2024 by Marvel Orleans</p>
+      <p><a href="mailto:cupapitheguy@gmail.com"> ✉️ Email: cupapitheguy@gmail.com</a></p>
+      <p>&copy; 2024 Marvel Orleans</p>
     </div>
   </footer>
 </body>
