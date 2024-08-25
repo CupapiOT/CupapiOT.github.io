@@ -309,49 +309,94 @@ main {
   grid-template-areas:
     "home"
     "home-extension"
-    "my-technologies"
+
+    "skills-anchor"
+    "skills"
+
     "work-experience"
+
+    "projects-anchor"
     "projects"
+
+    "about-anchor"
     "about";
 }
 
 footer {
-  background-color: #ffffff;
-  display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
   height: 5em;
-  margin: 0;
-}
-
-footer div {
-  display: flex;
-  background-color: transparent;
-  width: var(--central-width);
-  justify-content: space-between;
-  align-items: center;
-}
-
-footer div a {
-  color: var(--text-color);
-  text-decoration: none;
+  margin: auto 0 0;
 }
 
 /*
  * Class Styling
  */
 
+/* Anchor for scrolling */
+
+.section-scroll-anchor {
+  display: block;
+
+  --padding-amount: 0.5em;
+  height: var(--padding-amount);
+  margin: calc(-1 * var(--padding-amount));
+  visibility: hidden;
+}
+
+/* Glass effect */
+
 .glass {
   background-color: #a0a0a010;
   --blur-amount: 2px;
   backdrop-filter: blur(var(--blur-amount));
   -webkit-backdrop-filter: blur(var(--blur-amount));
+  border-bottom: #90909030 1px solid;
 }
+
+/* Horizontal rule with text in the middle */
+
+.line-with-text-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: max-content;
+}
+
+.line {
+  flex-shrink: 1;
+  flex-grow: 1;
+  height: 2px;
+  background-color: #ccc;
+}
+
+.text-between-line {
+  font-family: AvenirNextCyrBold, "Arial Black", sans-serif;
+  color: #222222;
+  font-size: 2em;
+  margin: 0 0.4em;
+}
+
+/* Skills Icon */
+
+.skills-icon-figure {
+  width: max-content;
+  height: max-content;
+  box-sizing: border-box;
+}
+
+.skills-icon {
+  width: 8em;
+}
+
+/* Projects Section */
 
 .projects-section__horizontal-rule {
   align-self: center;
   width: calc(var(--central-width) + 5vw);
+  border-top: 1px solid #ddd;
 }
 
 .projects-section__item {
@@ -471,11 +516,12 @@ footer div a {
 #top-nav__links {
   justify-content: right;
   display: flex;
-  max-width: 100%;
+  width: calc(2/3 * 100%);
   margin-inline: auto;
 }
 
 #top-nav__links p {
+  align-self: flex-start;
   color: black;
   margin-right: auto;
   margin-left: 1em;
@@ -554,7 +600,7 @@ footer div a {
 }
 
 #home-section h2 {
-  font-size: min(3.7vw, 4em);
+  font-size: min(max(1.5em, 3.7vw), 4em);
 }
 
 #home-section h2:first-child {
@@ -609,10 +655,48 @@ footer div a {
   color: #ffffff;
 }
 
-/* My Technologies Section */
+/* Skills Section */
 
-#my-technologies-section {
+#skills-section {
+  grid-area: skills;
+  margin-top: 5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
+#skills-section h2 {
+  font-size: 3em;
+}
+
+#skills-section__best-skill {
+  margin-top: 2em;
+  display: grid;
+  grid-template-areas:
+    "title"
+    "icon";
+}
+
+#skills-section__other-skills {
+  display: grid;
+  grid-template-areas:
+    "title title title"
+    "icon-1 icon-2 icon-3";
+  align-items: center;
+}
+
+#skills-section__tools {
+  display: grid;
+  grid-template-areas:
+    "title"
+    "icon";
+}
+
+#skills-section p {
+  grid-area: title;
+  text-align: center;
+
+  font-size: 1.5em;
 }
 
 /* Projects Section */
@@ -629,16 +713,13 @@ footer div a {
 }
 
 #projects-section h2 {
-  text-align: center;
   font-size: 3.5em;
-  margin-top: 3em;
-  margin-bottom: 2em;
 }
 
 #projects-section__items-container {
   grid-area: projects;
 
-  margin-top: 4em;
+  margin-top: 6em;
   display: flex;
   flex-direction: column;
   row-gap: 3em;
@@ -674,7 +755,7 @@ footer div a {
 }
 
 #about-section div {
-  margin-right: auto;
+  margin-right: 1em;
   width: auto;
 }
 
