@@ -14,6 +14,7 @@
 html {
   font-size: 1em;
   line-height: 1.4;
+  scroll-behavior: smooth;
 }
 
 /*
@@ -132,7 +133,7 @@ textarea {
   margin: 0;
   overflow: visible;
   position: static;
-  white-space: inherit;
+  #ffffff-space: inherit;
   width: auto;
 }
 
@@ -208,7 +209,7 @@ textarea {
   }
 
   pre {
-    white-space: pre-wrap !important;
+    #ffffff-space: pre-wrap !important;
   }
 
   pre,
@@ -267,6 +268,11 @@ textarea {
   src: url("../font/AvenirNextCyr-Demi.woff2");
 }
 
+@font-face {
+  font-family: AvenirNextCyrBold;
+  src: url("../font/AvenirNextCyr-Bold.woff2");
+}
+
 
 /*
  * General Styling
@@ -303,19 +309,20 @@ main {
   grid-template-areas:
     "home"
     "home-extension"
+    "my-technologies"
+    "work-experience"
     "projects"
     "about";
 }
 
 footer {
-  background-color: white;
+  background-color: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 5em;
   margin: 0;
-
 }
 
 footer div {
@@ -334,6 +341,13 @@ footer div a {
 /*
  * Class Styling
  */
+
+.glass {
+  background-color: #a0a0a010;
+  --blur-amount: 2px;
+  backdrop-filter: blur(var(--blur-amount));
+  -webkit-backdrop-filter: blur(var(--blur-amount));
+}
 
 .projects-section__horizontal-rule {
   align-self: center;
@@ -389,6 +403,7 @@ footer div a {
 .projects-section__item__description h3 {
   font-family: "AvenirNextCyrDemi", "Arial", sans-serif;
   font-size: 2em;
+  line-height: 1;
   margin: 0
 }
 
@@ -400,6 +415,7 @@ footer div a {
 .projects-section__item__tags {
   display: flex;
   gap: 0.5em;
+  flex-wrap: wrap;
 }
 
 .projects-section__item__tag {
@@ -424,6 +440,56 @@ footer div a {
 /*
  * ID Styling
  */
+
+/* Nav Bar */
+
+#top-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: clamp(1.25em, 6vh, 4em);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  z-index: 3;
+}
+
+#top-nav p {
+  float: left;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+#top-nav a {
+  float: right;
+  color: black;
+  text-decoration: none;
+  padding: 3vh 1.25em
+}
+
+#top-nav__links {
+  justify-content: right;
+  display: flex;
+  max-width: 100%;
+  margin-inline: auto;
+}
+
+#top-nav__links p {
+  color: black;
+  margin-right: auto;
+  margin-left: 1em;
+}
+
+#top-nav__links ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Home Section */
 
 #home-section {
   grid-area: home;
@@ -507,20 +573,14 @@ footer div a {
 }
 
 #home-section-extension h3 {
-  max-width: min(90%, 60ch);
-}
-
-#home-section-extension p {
-  max-width: min(70%, 45ch)
-}
-
-#home-section-extension h3 {
   font-weight: normal;
   margin-left: clamp(0.5em, 6vw, 10em);
+  max-width: min(90%, 60ch);
   font-size: min(max(1.1em, 2.32vw), 2.5em);
 }
 
 #home-section-extension p {
+  max-width: min(70%, 45ch);
   font-size: min(max(0.9em, 1.39vw), 1.5em);
   text-align: right;
   margin-right: 6vw;
@@ -545,10 +605,17 @@ footer div a {
 }
 
 #home-section-extension a:hover {
-  background: #0059ff;
-  color: white;
-  border: 0.06125em solid #0059ff;
+  background: #000000;
+  color: #ffffff;
 }
+
+/* My Technologies Section */
+
+#my-technologies-section {
+
+}
+
+/* Projects Section */
 
 #projects-section {
   margin-top: 8em;
@@ -577,35 +644,46 @@ footer div a {
   row-gap: 3em;
 }
 
+/* About Section */
+
 #about-section {
   grid-area: about;
   margin-inline: auto auto;
   margin-top: 5em;
-  width: calc(var(--central-width) + 12vw);
+  width: calc(var(--central-width) + 24vw);
+  height: 42em;
   padding: 1em;
   border-radius: 2em;
-  background: white;
+  background: #ffffff;
 
-  height: max-content;
-
-  display: grid;
-  grid-template-areas:
-  "profile-image descriptionx";
+  box-sizing: border-box;
+  display: flex;
 }
 
 #about-section figure {
-  object-fit: cover;
+  box-sizing: border-box;
+  height: calc(100% - 2em)
 }
 
-#about-section figure img {
-  height: 30em;
+#about-section img {
+  object-fit: cover;
+  aspect-ratio: 9 / 10;
+  height: 100%;
   border-radius: 2em;
+  width: max-content;
 }
 
 #about-section div {
   margin-right: auto;
+  width: auto;
 }
 
 #about-section h2 {
-  font-size: 3em;
+  font-size: 2.5em;
+  font-family: "AvenirNextCyrBold", "Impact", "Arial Black", sans-serif;
+}
+
+#about-section p {
+  color: black;
+  font-size: 1.2em;
 }
