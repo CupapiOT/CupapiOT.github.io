@@ -294,6 +294,10 @@ p {
   color: var(--text-color);
 }
 
+a {
+  text-decoration: none;
+}
+
 section {
   width: 100%;
 }
@@ -352,6 +356,40 @@ footer {
   backdrop-filter: blur(var(--blur-amount));
   -webkit-backdrop-filter: blur(var(--blur-amount));
   border-bottom: #90909030 1px solid;
+}
+
+/* Handle image switching on hover effect */
+
+button img.image-main {
+  object-fit: contain;
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+
+button:hover img.image-main {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  object-fit: contain;
+  opacity: 0;
+}
+
+button img.image-hover {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+button:hover img.image-hover {
+  position: static;
+  opacity: 1;
 }
 
 /* Horizontal rule with text in the middle */
@@ -509,7 +547,6 @@ footer {
 #top-nav a {
   float: right;
   color: black;
-  text-decoration: none;
   padding: 3vh 1.25em
 }
 
@@ -671,31 +708,25 @@ footer {
 
 #skills-section__best-skill {
   margin-top: 2em;
-  display: grid;
-  grid-template-areas:
-    "title"
-    "icon";
+  display: flex;
+  flex-direction: column;
 }
 
 #skills-section__other-skills {
-  display: grid;
-  grid-template-areas:
-    "title title title"
-    "icon-1 icon-2 icon-3";
+  display: flex;
+  flex-direction: row;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 #skills-section__tools {
-  display: grid;
-  grid-template-areas:
-    "title"
-    "icon";
+  display: flex;
+  flex-direction: column;
 }
 
 #skills-section p {
   grid-area: title;
   text-align: center;
-
   font-size: 1.5em;
 }
 
@@ -761,10 +792,52 @@ footer {
 
 #about-section h2 {
   font-size: 2.5em;
+  margin-bottom: 0;
   font-family: "AvenirNextCyrBold", "Impact", "Arial Black", sans-serif;
 }
 
 #about-section p {
   color: black;
-  font-size: 1.2em;
+  font-size: 1.25em;
+}
+
+#about-section a {
+  color: black
+}
+
+#copy-email-button {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 0.75em 1em;
+  background: transparent;
+
+  color: black;
+  font-size: 1em;
+  font-family: "AvenirNextCyrBold", "Impact", "Arial Black", sans-serif;
+
+  border: 0.06125em solid black;
+  border-radius: 2em;
+  text-decoration: none;
+  transition: background 0.3s ease, color 0.3s ease, border 0.3s ease;
+}
+
+#copy-email-button:hover {
+  background: #000000;
+  color: #ffffff;
+}
+
+#copy-email-button img {
+  width: 1.15em;
+  border-radius: 0;
+  object-fit: contain;
+  vertical-align: middle;
+}
+
+#about-section ul {
+  display: flex;
+  text-decoration-line: none;
+  list-style-type: none;
+  margin-left: -2.5em;
+  gap: 1em
 }
