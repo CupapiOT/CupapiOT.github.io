@@ -358,40 +358,6 @@ footer {
   border-bottom: #90909030 1px solid;
 }
 
-/* Handle image switching on hover effect */
-
-button img.image-main {
-  object-fit: contain;
-  opacity: 1;
-  transition: opacity 0.3s;
-}
-
-button:hover img.image-main {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  object-fit: contain;
-  opacity: 0;
-}
-
-button img.image-hover {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  object-fit: contain;
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-button:hover img.image-hover {
-  position: static;
-  opacity: 1;
-}
-
 /* Horizontal rule with text in the middle */
 
 .line-with-text-container {
@@ -832,6 +798,11 @@ button:hover img.image-hover {
   border-radius: 0;
   object-fit: contain;
   vertical-align: middle;
+  transition: transform 0.2s ease;
+}
+
+#copy-email-button:hover img {
+  content: url('../img/copy-email-button/copy-icon-white.svg');
 }
 
 #about-section ul {
