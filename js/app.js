@@ -1,10 +1,10 @@
 function copyTextToClipboard(text) {
   navigator.clipboard.writeText(text)
     .then(() => {
-      console.log('Text "successfully copied to clipboard.');
+      console.log("Text successfully copied to clipboard.");
     })
     .catch((error) => {
-      console.error('Failed to copy text: ', error);
+      console.error("Failed to copy text: ", error);
     });
 }
 
@@ -13,7 +13,7 @@ function applyActionToElements(action, ...elements) {
     if (element instanceof Element) {
       action(element);
     } else {
-      console.warn('Not an HTML element:', element);
+      console.warn("Not an HTML element:", element);
     }
   });
 }
@@ -29,12 +29,16 @@ function temporarilyOverrideImgAndStyle(milliseconds= 3000, ...elements) {
 }
 
 const copyEmailButton = document.getElementById('copy-email-button');
-const img = copyEmailButton.querySelector('img');
+const copyEmailButtonImg = copyEmailButton.querySelector('img');
+const copyEmailButtonPopUp = copyEmailButton.querySelector('span');
 copyEmailButton.addEventListener('click', () => {
-  copyTextToClipboard('hellomarvelorleans@gmail.com');
+  copyTextToClipboard("hellomarvelorleans@gmail.com");
   temporarilyOverrideImgAndStyle(
-      2000,
+      1500,
     copyEmailButton,
-    img
+    copyEmailButtonImg,
+    copyEmailButtonPopUp
   );
 });
+
+
