@@ -251,6 +251,27 @@ textarea {
   --text-color: #575757;
   --background-color: #f8f8f8;
   --central-width: clamp(30em, 52%, 80em);
+
+  --gradient: linear-gradient(
+    90deg,
+    #0059ff,
+    #003cff,
+    blue,
+    #4000ff,
+    indigo,
+    #5c00bf,
+    #771eda,
+    #b700ff,
+    #e600ff,
+    #b700ff,
+    #771eda,
+    #7b00ff,
+    indigo,
+    #4000ff,
+    blue,
+    #003cff,
+    #0059ff
+  );
 }
 
 @font-face {
@@ -519,16 +540,13 @@ footer {
   z-index: 3;
 }
 
-#top-nav p {
-  float: left;
-  align-self: flex-start;
-  margin: auto auto auto 1em;
-}
-
 #top-nav a {
   float: right;
-  padding: 3vh 1.25em
+  padding: 3vh 1.25em;
+  color: black;
+  text-shadow: 1px 1px 10px #FFFFFF80;
 }
+
 
 #top-nav__links {
   justify-content: right;
@@ -537,17 +555,28 @@ footer {
   margin-inline: auto;
 }
 
-#top-nav p, #top-nav a {
-  color: black;
-  text-shadow: 1px 1px 10px #FFFFFF80;
-}
-
 #top-nav__links ul {
   display: flex;
   flex-direction: row;
   list-style-type: none;
   margin: 0;
   padding: 0;
+}
+
+
+#top-nav__links>a {
+  float: left;
+  align-self: flex-start;
+  margin: auto auto auto 1em;
+
+  font-family: AvenirNextCyrBold, "Arial Black", sans-serif;
+  background-image: var(--gradient);
+  background-clip: text;
+  background-size: 400% 400%;
+  color: transparent;
+  transition: background-position 1s;
+  animation: GradientAnimation 20s linear infinite;
+  animation-delay: 0s;
 }
 
 #top-nav__links li:hover {
@@ -584,26 +613,6 @@ footer {
 #home-section h1 {
   font-size: min(22.2vw, 24em);
   font-family: "AvenirNextCyrHeavy", "Impact", "Arial Black", sans-serif;
-  --gradient: linear-gradient(
-    90deg,
-    #0059ff,
-    #003cff,
-    blue,
-    #4000ff,
-    indigo,
-    #5c00bf,
-    #771eda,
-    #b700ff,
-    #e600ff,
-    #b700ff,
-    #771eda,
-    #7b00ff,
-    indigo,
-    #4000ff,
-    blue,
-    #003cff,
-    #0059ff
-  );
 
   background-image: var(--gradient);
   background-clip: text;
