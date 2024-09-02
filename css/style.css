@@ -273,6 +273,11 @@ textarea {
   src: url("../font/AvenirNextCyr-Bold.woff2");
 }
 
+@font-face {
+  font-family: Inconsolata;
+  src: url("../font/Inconsolata.woff2");
+}
+
 
 /*
  * General Styling
@@ -286,8 +291,11 @@ body {
   grid-template-areas:
     "main"
     "footer";
-  grid-template-rows: 10fr 1fr;
+  grid-template-rows: 30fr 1fr;
   background-color: var(--background-color);
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 p {
@@ -311,26 +319,32 @@ main {
   display: grid;
   grid-area: main;
   grid-template-areas:
+    "home-scroll-anchor"
     "home"
     "home-extension"
 
-    "skills-anchor"
+    "skills-scroll-anchor"
     "skills"
 
     "work-experience"
 
-    "projects-anchor"
+    "projects-scroll-anchor"
     "projects"
 
-    "about-anchor"
+    "about-scroll-anchor"
     "about";
 }
 
 footer {
+  grid-area: footer;
   justify-content: center;
   align-items: center;
-  height: 5em;
-  margin: auto 0 0;
+  justify-self: center;
+  align-self: center;
+  width: 66%;
+
+  letter-spacing: -1px;
+  font-family: Inconsolata, "Courier New", monospace;
 }
 
 /*
@@ -536,6 +550,10 @@ footer {
   padding: 0;
 }
 
+#top-nav__links li:hover {
+  background-color: #a0a0a015;
+}
+
 /* Home Section */
 
 #home-section {
@@ -560,6 +578,7 @@ footer {
 #home-section h1, #home-section h2 {
   margin: 0;
   text-align: center;
+  letter-spacing: 1px;
 }
 
 #home-section h1 {
@@ -675,6 +694,24 @@ footer {
   display: flex;
   flex-direction: column;
 }
+
+/*#skills-section__best-skill figure {*/
+/*  display: flex;*/
+/*  flex-direction: row;*/
+/*  align-items: center;*/
+/*  gap: 2em;*/
+/*}*/
+
+/*#skills-section__best-skill figcaption {*/
+/*  position: absolute;*/
+/*  text-align: center;*/
+/*  translate: -10% -10%;*/
+
+/*  letter-spacing: -1px;*/
+/*  line-height: 1em;*/
+/*  opacity: 0.5;*/
+/*  font-size: 2em;*/
+/*}*/
 
 #skills-section__other-skills {
   display: flex;
@@ -822,11 +859,16 @@ footer {
   color: white;
   font-size: 0.8em;
 
-  visibility: hidden;
+  display: none;
 }
 
 #copy-email-button span.override-image {
-  visibility: visible;
+  display: inline;
+}
+
+#about-section hr {
+  margin-top: 2.25em;
+  margin-bottom: 2em;
 }
 
 #about-section ul {
@@ -834,5 +876,5 @@ footer {
   text-decoration-line: none;
   list-style-type: none;
   margin-left: -2.5em;
-  gap: 1em
+  gap: 1em;
 }
