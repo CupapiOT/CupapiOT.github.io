@@ -250,7 +250,7 @@ textarea {
 :root {
   --text-color: #575757;
   --background-color: #f8f8f8;
-  --central-width: clamp(30em, 52%, 80em);
+  --central-width: clamp(30rem, 52%, 80rem);
 
   --gradient: linear-gradient(
     90deg,
@@ -354,6 +354,11 @@ main {
 
     "about-scroll-anchor"
     "about";
+  max-width: 100vw;
+}
+
+main * {
+  max-width: 100vw;
 }
 
 footer {
@@ -406,7 +411,6 @@ footer {
 }
 
 .line {
-  flex-shrink: 1;
   flex-grow: 1;
   height: 2px;
   background-color: #ccc;
@@ -415,8 +419,8 @@ footer {
 .text-between-line {
   font-family: AvenirNextCyrBold, "Arial Black", sans-serif;
   color: #222222;
-  font-size: 2em;
   margin: 0 0.4em;
+  font-size: min(8vw, 4em) !important;
 }
 
 /* Skills Icon */
