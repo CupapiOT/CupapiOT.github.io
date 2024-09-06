@@ -827,13 +827,6 @@ main * {
   gap: 1em;
 }
 
-#about-section a::before{
-  content: '';
-  position: absolute;
-  height: 2px;
-  background: red;
-}
-
 
 /* Footer */
 
@@ -865,6 +858,7 @@ footer {
   border-bottom: #90909030 1px solid;
 }
 
+
 /* Anchor for scrolling */
 
 .section-scroll-anchor {
@@ -876,6 +870,7 @@ footer {
   visibility: hidden;
   max-width: 1px;
 }
+
 
 /* Horizontal rule with text in the middle */
 
@@ -901,4 +896,31 @@ footer {
   color: #222222;
   margin: 0 0.4em;
   font-size: min(8vw, 4em) !important;
+}
+
+
+/* Standard Link Hover */
+
+.standard-link-hover {
+  position: relative;
+}
+
+.standard-link-hover::before {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  height: 0.0625rem;
+  left: 0;
+  width: 100%;
+  bottom: 0;
+  background-color: #000000;
+
+  transform: scaleX(0);
+  transition: transform 0.25s ease-in-out;
+  transform-origin: right;
+}
+
+.standard-link-hover:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
 }
