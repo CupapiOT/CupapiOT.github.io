@@ -554,24 +554,6 @@ main * {
   flex-direction: column;
 }
 
-/*#skills-section__best-skill figure {*/
-/*  display: flex;*/
-/*  flex-direction: row;*/
-/*  align-items: center;*/
-/*  gap: 2em;*/
-/*}*/
-
-/*#skills-section__best-skill figcaption {*/
-/*  position: absolute;*/
-/*  text-align: center;*/
-/*  translate: -10% -10%;*/
-
-/*  letter-spacing: -1px;*/
-/*  line-height: 1em;*/
-/*  opacity: 0.5;*/
-/*  font-size: 2em;*/
-/*}*/
-
 #skills-section__other-skills {
   display: flex;
   flex-direction: row;
@@ -589,6 +571,7 @@ main * {
   text-align: center;
   font-size: 1.5em;
 }
+
 
 /* Projects Section */
 
@@ -787,10 +770,6 @@ main * {
   content: url('../img/copy-email-button/copy-icon-white.svg');
 }
 
-#copy-email-button img.override-image {
-  content: var(--overriding-image) !important;
-}
-
 #copy-email-button.override-image {
   background: #000000 !important;
   color: #ffffff !important;
@@ -896,6 +875,13 @@ footer {
   color: #222222;
   margin: 0 0.4em;
   font-size: min(8vw, 4em) !important;
+}
+
+
+/* IMG-Override handling */
+
+img.override-image {
+  content: var(--overriding-image) !important;
 }
 
 
