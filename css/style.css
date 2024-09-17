@@ -384,6 +384,8 @@ main * {
   padding: 3vh 1.25em;
   color: black;
   text-shadow: 1px 1px 10px #FFFFFF80;
+
+  font-size: 1.125em;
 }
 
 
@@ -450,8 +452,8 @@ main * {
 }
 
 #home-section h1 {
-  font-size: min(22.2vw, 24em);
-  font-family: "AvenirNextCyrHeavy", "Impact", "Arial Black", sans-serif;
+  font-size: min(22.2vw, 24rem);
+  font-family: "AvenirNextCyrHeavy", "Arial Black", sans-serif;
 
   background-image: var(--gradient);
   background-clip: text;
@@ -725,7 +727,7 @@ main * {
 #about-section h2 {
   font-size: 2.5em;
   margin-bottom: 0;
-  font-family: "AvenirNextCyrBold", "Impact", "Arial Black", sans-serif;
+  font-family: "AvenirNextCyrBold", "Arial Black", sans-serif;
 }
 
 #about-section p {
@@ -746,7 +748,7 @@ main * {
 
   color: black;
   font-size: 1em;
-  font-family: "AvenirNextCyrBold", "Impact", "Arial Black", sans-serif;
+  font-family: "AvenirNextCyrBold", "Arial Black", sans-serif;
 
   border: 0.06125em solid black;
   border-radius: 2em;
@@ -831,7 +833,7 @@ footer {
 
 .glass {
   background-color: #a0a0a010;
-  --blur-amount: 2px;
+  --blur-amount: 5px;
   backdrop-filter: blur(var(--blur-amount));
   -webkit-backdrop-filter: blur(var(--blur-amount));
   border-bottom: #90909030 1px solid;
