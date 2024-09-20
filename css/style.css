@@ -244,6 +244,12 @@ textarea {
  */
 
 /*
+ * =====================================
+ * Basic Styling for Large Screens.
+ * =====================================
+ */
+
+/*
  * Variables and Fonts
  */
 
@@ -918,4 +924,26 @@ img.override-image {
 .standard-link-hover:hover::before {
   transform: scaleX(1);
   transform-origin: left;
+}
+
+
+/*
+ * =====================================
+ * Responsiveness for Mobile Screens.
+ * =====================================
+ */
+
+@media only screen and (max-width: 600px) {
+
+}
+
+
+/*
+ * =====================================
+ * Responsiveness for Tablet Screens.
+ * =====================================
+ */
+
+@media only screen and (max-width: 768px) {
+
 }
