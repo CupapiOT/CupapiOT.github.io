@@ -276,27 +276,27 @@ textarea {
 
 @font-face {
   font-family: AvenirNextCyrMedium;
-  src: url("../font/AvenirNextCyr-Medium.woff2");
+  src: url("../fonts/AvenirNextCyr-Medium.woff2");
 }
 
 @font-face {
   font-family: AvenirNextCyrHeavy;
-  src: url("../font/AvenirNextCyr-Heavy.woff2");
+  src: url("../fonts/AvenirNextCyr-Heavy.woff2");
 }
 
 @font-face {
   font-family: AvenirNextCyrDemi;
-  src: url("../font/AvenirNextCyr-Demi.woff2");
+  src: url("../fonts/AvenirNextCyr-Demi.woff2");
 }
 
 @font-face {
   font-family: AvenirNextCyrBold;
-  src: url("../font/AvenirNextCyr-Bold.woff2");
+  src: url("../fonts/AvenirNextCyr-Bold.woff2");
 }
 
 @font-face {
   font-family: Inconsolata;
-  src: url("../font/Inconsolata.woff2");
+  src: url("../fonts/Inconsolata.woff2");
 }
 
 
