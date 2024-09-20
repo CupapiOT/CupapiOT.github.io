@@ -485,7 +485,14 @@ main * {
   grid-area: home-extension;
   padding-top: 5em;
   display: grid;
+  justify-items: center;
+}
+
+#home-section-extension>.wrapper {
+  max-width: 95%;
+  display: grid;
   grid-template-rows: 2fr 1fr 0.5fr;
+  flex-direction: column;
 }
 
 #home-section-extension h3 {
