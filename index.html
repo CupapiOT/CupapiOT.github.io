@@ -28,14 +28,23 @@
   <header class="glass" id="top-nav">
     <nav id="top-nav__links">
       <a href="#home">Marvel</a>
-      <ul>
+      <ul data-link-format="inline">
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#about">About</a></li>
       </ul>
-      <button><img src="img/nav-bar/hamburger-menu-icon.svg" alt="Hamburger menu."></button>
+      
+      <label class="hamburger-menu" id="top-nav__hamburger-menu">
+        <input type="checkbox" id="hamburger-menu__toggle"/>
+      </label>
+      <ul class="dropdown glass" id="hamburger-menu__dropdown" data-link-format="dropdown">
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
     </nav>
   </header>
+
   <main id="container">
     <div class="section-scroll-anchor" id="home"></div>
     <section id="home-section">
@@ -128,7 +137,8 @@
             </div>
           </div>
           <figure>
-            <img src="img/home-page/projects-section/image-references.png" alt="Self-service Sketch-referencing App, named 'Image References'">
+            <img src="img/home-page/projects-section/image-references.png"
+              alt="Self-service Sketch-referencing App, named 'Image References'">
           </figure>
         </article>
 
