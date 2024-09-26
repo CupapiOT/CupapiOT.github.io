@@ -368,7 +368,7 @@ main * {
  * Per-section Styling
  */
 
-/* Nav Bar */
+/* Navigation Bar */
 
 #top-nav {
   position: fixed;
@@ -953,6 +953,8 @@ img.override-image {
     --nav-bar-height: 3.5em;
   }
 
+  /* Navigation Bar */
+
   #top-nav {
     height: max-content;
     box-sizing: border-box;
@@ -1066,6 +1068,12 @@ img.override-image {
 
   .dropdown:has(a:active) {
     transform: scaleY(0);
+  }
+
+  .hamburger-menu:has(input:focus-visible)::before, 
+  .hamburger-menu:has(input:focus-visible)::after, 
+  .hamburger-menu input:focus-visible {
+    box-shadow: 0 0 0 2px #ffa600;
   }
 }
 
