@@ -279,6 +279,7 @@ textarea {
 
   --nav-bar-height: clamp(1.25em, 6vh, 4em);
   --glass-border: #90909030 1px solid;
+  --text-shadow: 1px 1px 10px #ffffff80;
 }
 
 @font-face {
@@ -385,7 +386,7 @@ main * {
 #top-nav a {
   float: right;
   color: black;
-  text-shadow: 1px 1px 10px #ffffff80;
+  text-shadow: var(--text-shadow);
 
   font-size: 1.125em;
 }
@@ -956,7 +957,7 @@ img.override-image {
     height: max-content;
     box-sizing: border-box;
     overflow: visible;
-    height: var(--nav-bar-height)
+    height: var(--nav-bar-height);
   }
 
   #top-nav__links {
@@ -1047,12 +1048,24 @@ img.override-image {
     width: 100vw;
     max-height: 6rem;
     border-bottom: var(--glass-border);
+    transform: scaleY(0);
+    transform-origin: top center;
+    transition: transform var(--animation-timing);
   }
 
   .dropdown li > a {
     width: 100%;
     text-align: right;
     padding-right: 1.65em;
+    text-shadow: var(--text-shadow);
+  }
+
+  .hamburger-menu:has(input:checked) + .dropdown {
+    transform: scaleY(1);
+  }
+
+  .dropdown:has(a:active) {
+    transform: scaleY(0);
   }
 }
 
