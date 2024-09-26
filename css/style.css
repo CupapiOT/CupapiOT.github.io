@@ -276,7 +276,9 @@ textarea {
     #003cff,
     #0059ff
   );
+
   --nav-bar-height: clamp(1.25em, 6vh, 4em);
+  --glass-border: #90909030 1px solid;
 }
 
 @font-face {
@@ -377,7 +379,7 @@ main * {
   align-items: center;
   overflow: hidden;
   z-index: 3;
-  border-bottom: #90909030 1px solid;
+  border-bottom: var(--glass-border);
 }
 
 #top-nav a {
@@ -932,8 +934,6 @@ img.override-image {
   z-index: 4;
 }
 
-
-
 /*
  * =====================================
  * Responsiveness for Mobile Screens.
@@ -941,10 +941,22 @@ img.override-image {
  */
 
 @media only screen and (max-width: 480px) {
+  :root {
+    --bar-width: 45px;
+    --bar-height: 5px;
+    --hamburger-gap: 6px;
+    --foreground-color: #333;
+    --background-color: white;
+    --animation-timing: 200ms ease-in-out;
+    --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
+    --nav-bar-height: 3.5em;
+  }
+
   #top-nav {
     height: max-content;
     box-sizing: border-box;
     overflow: visible;
+    height: var(--nav-bar-height)
   }
 
   #top-nav__links {
@@ -962,21 +974,7 @@ img.override-image {
   }
 
   #top-nav__links ul[data-link-format="dropdown"] {
-    display: flex
-  }
-
-  /* #top-nav__links [data-link-format="dropdown"] {
-    display: none
-  } */
-
-  :root {
-    --bar-width: 45px;
-    --bar-height: 5px;
-    --hamburger-gap: 6px;
-    --foreground-color: #333;
-    --background-color: white;
-    --animation-timing: 200ms ease-in-out;
-    --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
+    display: flex;
   }
 
   .hamburger-menu {
@@ -999,10 +997,8 @@ img.override-image {
     background-color: var(--foreground-color);
     border-radius: 999em;
     transform-origin: right center;
-    transition: opacity var(--animation-timing), 
-      width var(--animation-timing),
-      transform var(--animation-timing), 
-      rotate var(--animation-timing),
+    transition: opacity var(--animation-timing), width var(--animation-timing),
+      transform var(--animation-timing), rotate var(--animation-timing),
       translate var(--animation-timing);
   }
 
@@ -1042,15 +1038,20 @@ img.override-image {
     align-self: center;
     margin-right: 1em;
   }
-  
+
   .dropdown {
     flex-direction: column !important;
+    gap: var(--hamburger-gap);
     top: var(--nav-bar-height);
     right: 0;
     width: 100vw;
+    max-height: 6rem;
+    border-bottom: var(--glass-border);
   }
 
-  .dropdown li {
+  .dropdown li > a {
+    width: 100%;
+    text-align: right;
     padding-right: 1.65em;
   }
 }
