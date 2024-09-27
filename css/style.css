@@ -671,7 +671,7 @@ main * {
 
 .projects-section__item__description p {
   margin-top: 0.4em;
-  margin-bottom: 1.2em;
+  margin-bottom: 1.25em;
 }
 
 .projects-section__item__tags {
@@ -952,6 +952,9 @@ img.override-image {
 
 @media only screen and (max-width: 480px) {
   :root {
+    --central-width: 90vw;
+
+    /* Navigation Bar Variables */
     --bar-width: 45px;
     --bar-height: 5px;
     --hamburger-gap: 6px;
@@ -1111,6 +1114,34 @@ img.override-image {
 
   .skills-icon-figure {
     margin-inline: 1em;
+  }
+
+  /* Projects Section */
+
+  .projects-section__horizontal-rule {
+    --central-width: 80vw;
+    width: var(--central-width);
+  }
+
+  .projects-section__item {
+    grid-template-areas:
+      "image"
+      "description";
+    grid-template-rows: 1.1fr 1fr;
+    width: var(--central-width);
+  }
+
+  .projects-section__item figure {
+    width: var(--central-width);
+    box-shadow: 0 0 10px 0 #55555540;
+  }
+
+  .projects-section__item__description h3 {
+    font-size: 1.75em;
+  }
+
+  .projects-section__item:last-of-type .projects-section__item__description {
+    margin-top: -3em;
   }
 }
 
