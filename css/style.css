@@ -519,7 +519,7 @@ main * {
   font-weight: normal;
   margin-left: clamp(0.5em, 6vw, 10em);
   max-width: min(90%, 60ch);
-  font-size: min(max(1.1em, 2vw + 0.7em), 2.5em);
+  font-size: min(max(1.1em, 2vw + 0.75em), 2.5em);
 }
 
 #home-section-extension p {
@@ -561,7 +561,7 @@ main * {
 }
 
 .skills-icon {
-  width: 8em;
+  width: clamp(5em, 5vw + 2em, 8em);
 }
 
 #skills-section {
@@ -576,6 +576,16 @@ main * {
   font-size: 3em;
 }
 
+#skills-section
+  :is(
+    #skills-section__best-skill,
+    #skills-section__other-skills,
+    #skills-section__tools
+  ) {
+  justify-content: center;
+  align-items: center;
+}
+
 #skills-section__best-skill {
   margin-top: 2em;
   display: flex;
@@ -585,7 +595,6 @@ main * {
 #skills-section__other-skills {
   display: flex;
   flex-direction: row;
-  align-items: center;
   flex-wrap: wrap;
 }
 
@@ -1092,6 +1101,16 @@ img.override-image {
 
   #home-section h2:first-child {
     margin-bottom: -1.25em;
+  }
+
+  /* Skills Section */
+
+  #skills-section__other-skills {
+    max-width: 90vw;
+  }
+
+  .skills-icon-figure {
+    margin-inline: 1em;
   }
 }
 
