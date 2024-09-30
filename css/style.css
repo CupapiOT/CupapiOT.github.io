@@ -484,6 +484,7 @@ main * {
   0% {
     background-position: 0 50%;
   }
+
   100% {
     background-position: 400% 50%;
   }
@@ -736,8 +737,6 @@ main * {
 
   box-sizing: border-box;
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
 }
 
 #about-section figure {
@@ -785,7 +784,8 @@ main * {
   border-radius: 99em;
   text-decoration: none;
   --animation-timing: 0.3s ease;
-  transition: background var(--animation-timing), color var(--animation-timing), border var(--animation-timing);
+  transition: background var(--animation-timing), color var(--animation-timing),
+    border var(--animation-timing);
 
   --overriding-image: url("../img/copy-email-button/check-mark-icon.svg");
 }
@@ -844,11 +844,9 @@ main * {
 
 footer {
   grid-area: footer;
-  justify-content: center;
-  align-items: center;
   justify-self: center;
   align-self: center;
-  width: 66%;
+  width: calc(2 / 3 * 100%);
 
   letter-spacing: -1px;
   font-family: Inconsolata, "Courier New", monospace;
@@ -951,6 +949,8 @@ img.override-image {
  */
 
 @media only screen and (max-width: 480px) {
+  /* Variables */
+
   :root {
     --central-width: 90vw;
 
@@ -962,6 +962,12 @@ img.override-image {
     --animation-timing: 200ms ease-in-out;
     --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
     --nav-bar-height: 3.5em;
+  }
+
+  /* General Styling */
+  body {
+    /* For Footer */
+    grid-template-rows: 30fr 0.5fr;
   }
 
   /* Navigation Bar */
@@ -1146,17 +1152,14 @@ img.override-image {
   /* About Section */
 
   #about-section {
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     --central-width: 95vw;
     width: var(--central-width);
     height: auto;
-    margin-top: 5em;
     padding: 1.5em;
-    background: white;
-    border-radius: 2em;
+    margin-bottom: 1.75em;
   }
 
   #about-section figure {
@@ -1166,7 +1169,7 @@ img.override-image {
   }
 
   #about-section figure > img {
-    width: 100%
+    width: 100%;
   }
 
   #about-section div {
@@ -1201,6 +1204,13 @@ img.override-image {
     justify-content: space-evenly;
     margin-left: 0;
     gap: 1em;
+  }
+
+  /* Footer */
+
+  footer {
+    width: var(--central-width);
+    letter-spacing: -0.5px;
   }
 }
 
