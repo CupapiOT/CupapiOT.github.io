@@ -944,6 +944,22 @@ img.override-image {
 
 /*
  * =====================================
+ * Responsiveness for Smaller Mobile Screens.
+ * =====================================
+ */
+
+@media only screen and (max-width: 385px) {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  
+}
+
+/*
+ * =====================================
  * Responsiveness for Mobile Screens.
  * =====================================
  */
@@ -1159,7 +1175,7 @@ img.override-image {
     width: var(--central-width);
     height: auto;
     padding: 1.5em;
-    margin-bottom: 1.75em;
+    margin-bottom: 1em;
   }
 
   #about-section figure {
@@ -1209,6 +1225,9 @@ img.override-image {
   /* Footer */
 
   footer {
+    display: flex;
+    height: 100%;
+    align-items: end;
     width: var(--central-width);
     letter-spacing: -0.5px;
   }
