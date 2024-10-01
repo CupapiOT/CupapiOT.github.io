@@ -1167,7 +1167,7 @@ img.override-image {
     width: var(--central-width);
     height: auto;
     padding: 1.5em;
-    margin-bottom: 1em;
+    margin-bottom: 9vw;
   }
 
   #about-section figure {
@@ -1219,7 +1219,7 @@ img.override-image {
   footer {
     display: flex;
     height: 100%;
-    align-items: end;
+    align-items: center;
     width: var(--central-width);
     letter-spacing: -0.5px;
   }
