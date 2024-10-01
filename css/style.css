@@ -954,8 +954,6 @@ img.override-image {
   *::after {
     box-sizing: border-box;
   }
-
-  
 }
 
 /*
@@ -1145,11 +1143,9 @@ img.override-image {
   }
 
   .projects-section__item {
-    grid-template-areas:
-      "image"
-      "description";
-    grid-template-rows: 1.1fr 1fr;
-    width: var(--central-width);
+    display: flex;
+    flex-direction: column-reverse;
+    row-gap: 1.25em;
   }
 
   .projects-section__item figure {
@@ -1158,11 +1154,7 @@ img.override-image {
   }
 
   .projects-section__item__description h3 {
-    font-size: 1.75em;
-  }
-
-  .projects-section__item:last-of-type .projects-section__item__description {
-    margin-top: -3em;
+    font-size: clamp(1.5em, 4vw + 0.5em, 1.75em);
   }
 
   /* About Section */
