@@ -452,10 +452,13 @@ main * {
   align-items: center;
   grid-template-rows: 3fr 14fr 2fr;
   width: 100%;
+  max-width: 100%;
   height: 100vh;
 }
 
 #home-section__introduction {
+  box-sizing: border-box;
+  max-width: inherit;
   grid-area: intro;
   translate: 0 -10%;
 }
@@ -956,6 +959,16 @@ img.override-image {
   }
 }
 
+@media only screen and (max-width: 395px) {
+  #home-section__introduction h1 {
+    font-size: calc(min(17vw + 2rem, 24rem) - calc((395px - 100vw) / 20));
+  }
+  
+  #home-section__introduction h2 {
+    font-size: max(1.44em, calc(min(max(1.5em, 3vw + 1rem), 4em) - calc((395px - 100vw) / 20)));
+  }
+}
+
 /*
  * =====================================
  * Responsiveness for Mobile Screens.
@@ -1117,8 +1130,11 @@ img.override-image {
   @supports (max-height: 100svh) {
     #home-section {
       max-height: 100svh;
-      justify-self: center;
     }
+  }
+
+  #home-section h1 {
+    letter-spacing: 0;
   }
 
   #home-section h2:first-child {
