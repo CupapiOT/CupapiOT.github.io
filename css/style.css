@@ -1208,12 +1208,12 @@ img.override-image {
   }
 
   #about-section h2 {
-    font-size: 2.5em;
+    font-size: clamp(1.5em, 1.75em + 2vw, 2.5em);
     margin-bottom: 0;
   }
 
   #about-section p {
-    font-size: 1.25em;
+    font-size: calc(clamp(1rem, 1em + 2vw, 1.25em) - calc((395px - 100vw) / 40));
   }
 
   #copy-email-button {
