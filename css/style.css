@@ -1173,7 +1173,7 @@ img.override-image {
     --central-width: 95vw;
     width: var(--central-width);
     height: auto;
-    padding: 1.5em;
+    padding: clamp(0.8em, 5vw, 1.5em);
     margin-bottom: 9vw;
   }
 
@@ -1189,7 +1189,7 @@ img.override-image {
 
   #about-section div {
     margin-right: 0em;
-    width: auto;
+    width: 100%;
   }
 
   #about-section h2 {
@@ -1257,5 +1257,13 @@ img.override-image {
   *::before,
   *::after {
     box-sizing: border-box;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  #copy-email-button {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: clamp(0.5em, 0.5em + 1.9vw, 0.95em);
   }
 }
