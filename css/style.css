@@ -946,26 +946,11 @@ img.override-image {
 
 /*
  * =====================================
- * Responsiveness for Smaller Mobile Screens.
+ * Responsiveness for Tablet Screens.
  * =====================================
  */
 
-@media only screen and (max-width: 385px) {
-  *,
-  *::before,
-  *::after {
-    box-sizing: border-box;
-  }
-}
-
-@media only screen and (max-width: 395px) {
-  #home-section__introduction h1 {
-    font-size: calc(min(17vw + 2rem, 24rem) - calc((395px - 100vw) / 10));
-  }
-  
-  #home-section__introduction h2 {
-    font-size: calc(min(max(1.5em, 3vw + 1rem), 4em) - calc((395px - 100vw) / 25));
-  }
+@media only screen and (max-width: 768px) {
 }
 
 /*
@@ -1213,7 +1198,9 @@ img.override-image {
   }
 
   #about-section p {
-    font-size: calc(clamp(1rem, 1em + 2vw, 1.25em) - calc((395px - 100vw) / 40));
+    font-size: calc(
+      clamp(1rem, 1em + 2vw, 1.25em) - calc((395px - 100vw) / 40)
+    );
   }
 
   #copy-email-button {
@@ -1249,9 +1236,26 @@ img.override-image {
 
 /*
  * =====================================
- * Responsiveness for Tablet Screens.
+ * Responsiveness for Smaller Mobile Screens.
  * =====================================
  */
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 395px) {
+  #home-section__introduction h1 {
+    font-size: calc(min(17vw + 2rem, 24rem) - calc((395px - 100vw) / 10));
+  }
+
+  #home-section__introduction h2 {
+    font-size: calc(
+      min(max(1.5em, 3vw + 1rem), 4em) - calc((395px - 100vw) / 25)
+    );
+  }
+}
+
+@media only screen and (max-width: 385px) {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
 }
