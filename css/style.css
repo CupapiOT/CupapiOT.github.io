@@ -516,7 +516,6 @@ main * {
   max-width: 95%;
   display: grid;
   grid-template-rows: 2fr 1fr 0.5fr;
-  flex-direction: column;
 }
 
 #home-section-extension h3 {
@@ -961,11 +960,11 @@ img.override-image {
 
 @media only screen and (max-width: 395px) {
   #home-section__introduction h1 {
-    font-size: calc(min(17vw + 2rem, 24rem) - calc((395px - 100vw) / 20));
+    font-size: calc(min(17vw + 2rem, 24rem) - calc((395px - 100vw) / 10));
   }
   
   #home-section__introduction h2 {
-    font-size: max(1.44em, calc(min(max(1.5em, 3vw + 1rem), 4em) - calc((395px - 100vw) / 20)));
+    font-size: calc(min(max(1.5em, 3vw + 1rem), 4em) - calc((395px - 100vw) / 25));
   }
 }
 
@@ -1139,6 +1138,13 @@ img.override-image {
 
   #home-section h2:first-child {
     margin-bottom: -1.25em;
+  }
+
+  #home-section-extension > .wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: calc(1em + 3vw);
+    margin-bottom: calc(1em + 8vw);
   }
 
   /* Skills Section */
