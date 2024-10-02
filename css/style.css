@@ -561,10 +561,13 @@ main * {
   width: max-content;
   height: max-content;
   box-sizing: border-box;
+  margin-top: -0.05em;
 }
 
 .skills-icon {
-  width: clamp(5em, 5vw + 2em, 8em);
+  --icon-length: clamp(4em, 10vw + 2em, 8em);
+  width: var(--icon-length);
+  height: var(--icon-length);
 }
 
 #skills-section {
@@ -575,10 +578,6 @@ main * {
   align-items: center;
 }
 
-#skills-section h2 {
-  font-size: 3em;
-}
-
 #skills-section
   :is(
     #skills-section__best-skill,
@@ -587,6 +586,7 @@ main * {
   ) {
   justify-content: center;
   align-items: center;
+  margin-bottom: calc(0.25em + 2vw);
 }
 
 #skills-section__best-skill {
@@ -609,7 +609,7 @@ main * {
 #skills-section p {
   grid-area: title;
   text-align: center;
-  font-size: 1.5em;
+  font-size: clamp(0.9em, 2vw + 0.9em, 1.5em);
 }
 
 /* Projects Section */
@@ -813,7 +813,7 @@ main * {
 
 #copy-email-button span {
   position: absolute;
-  translate: 19rem;
+  translate: 300%;
   padding: 0.5rem;
   border-radius: 0.5rem;
 
