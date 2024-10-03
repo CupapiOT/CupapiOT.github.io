@@ -25,14 +25,32 @@ for (let i = 0; i < hamburgerMenuLinks.length; i++) {
 // Copy Email Button
 
 function copyTextToClipboard(text) {
-  navigator.clipboard
-    .writeText(text)
-    .then(() => {
-      console.log("Text successfully copied to clipboard.");
-    })
-    .catch((error) => {
-      console.error("Failed to copy text: ", error);
-    });
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard
+      .writeText(text)
+      .then(() => {
+        console.log("Text successfully copied to clipboard.");
+      })
+      .catch((error) => {
+        console.error("Failed to copy text: ", error);
+      });
+  } else {
+    // Fallback for browsers that don't support the Clipboard API.
+    const temporaryTextArea = document.createElement("textarea");
+    temporaryTextArea.value = text;
+    document.body.appendChild(temporaryTextArea);
+    temporaryTextArea.select();
+    temporaryTextArea.setSelectionRange(0, 99999);
+
+    try {
+      document.execCommand("copy");
+      console.log("Fallback: Text successfully copied to clipboard.");
+    } catch (error) {
+      console.error("Fallback: Failed to copy text: ", error);
+    }
+
+    document.body.removeChild(temporaryTextArea);
+  }
 }
 
 function temporarilyOverrideImgAndStyle(milliseconds = 3000, ...elements) {
@@ -50,15 +68,36 @@ function temporarilyOverrideImgAndStyle(milliseconds = 3000, ...elements) {
   );
 }
 
+function copyEmailButtonEventListener(
+  action,
+  copyEmailButton,
+  copyEmailButtonImg,
+  copyEmailButtonPopUp
+) {
+  copyEmailButton.addEventListener(action, () => {
+    copyTextToClipboard("hellomarvelorleans@gmail.com");
+    temporarilyOverrideImgAndStyle(
+      1500,
+      copyEmailButton,
+      copyEmailButtonImg,
+      copyEmailButtonPopUp
+    );
+  });
+}
+
 const copyEmailButton = document.getElementById("copy-email-button");
 const copyEmailButtonImg = copyEmailButton.querySelector("img");
 const copyEmailButtonPopUp = copyEmailButton.querySelector("span");
-copyEmailButton.addEventListener("click", () => {
-  copyTextToClipboard("hellomarvelorleans@gmail.com");
-  temporarilyOverrideImgAndStyle(
-    1500,
-    copyEmailButton,
-    copyEmailButtonImg,
-    copyEmailButtonPopUp
-  );
-});
+
+copyEmailButtonEventListener(
+  "click",
+  copyEmailButton,
+  copyEmailButtonImg,
+  copyEmailButtonPopUp
+);
+copyEmailButtonEventListener(
+  "touchstart",
+  copyEmailButton,
+  copyEmailButtonImg,
+  copyEmailButtonPopUp
+);

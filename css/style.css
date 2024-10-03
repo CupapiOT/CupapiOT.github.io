@@ -739,6 +739,8 @@ main * {
 
   box-sizing: border-box;
   display: flex;
+
+  --about-section-text-color: #333;
 }
 
 #about-section figure {
@@ -763,7 +765,7 @@ main * {
 }
 
 #about-section p {
-  color: black;
+  color: var(--about-section-text-color);
   font-size: 1.25em;
 }
 
@@ -790,6 +792,7 @@ main * {
     border var(--animation-timing);
 
   --overriding-image: url("../img/copy-email-button/check-mark-icon.svg");
+  z-index: 5;
 }
 
 #copy-email-button:hover {
