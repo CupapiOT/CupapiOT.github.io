@@ -729,10 +729,13 @@ main * {
 
 #about-section {
   grid-area: about;
-  margin-inline: auto auto;
+  margin-inline: auto;
   margin-top: 5em;
-  width: calc(var(--central-width) + 24vw);
-  height: 42em;
+  /* --central-width: clamp(30rem, 52%, 80rem); */
+  width: calc(var(--central-width) + clamp(15rem, 2rem + 18vw, 40rem));
+  height: auto;
+  max-width: 95vw;
+  max-height: 50vw;
   padding: 1em;
   border-radius: 2em;
   background: #ffffff;
@@ -746,9 +749,12 @@ main * {
 #about-section figure {
   display: flex;
   box-sizing: border-box;
+  position: relative;
+  width: 90%;
 }
 
 #about-section figure > img {
+  width: 100%;
   object-fit: cover;
   aspect-ratio: 9 / 10;
   border-radius: 2em;
@@ -1178,6 +1184,8 @@ img.override-image {
     --central-width: 95vw;
     width: var(--central-width);
     height: auto;
+    max-height: none;
+    max-width: none;
     padding: clamp(0.8em, 5vw, 1.5em);
     margin-bottom: 9vw;
   }
