@@ -565,7 +565,7 @@ main * {
 }
 
 .skills-icon {
-  --icon-length: clamp(4em, 10vw + 2em, 8em);
+  --icon-length: clamp(4em, 9vw + 1em, 8em);
   width: var(--icon-length);
   height: var(--icon-length);
 }
@@ -626,7 +626,8 @@ main * {
   align-self: center;
   grid-template-areas: "description image";
   grid-template-columns: 1.1fr 1fr;
-  width: var(--central-width);
+  width: 62.4rem;
+  max-width: 95vw;
   column-gap: 5em;
 }
 
@@ -756,6 +757,7 @@ main * {
 
 #about-section figure > img {
   width: 100%;
+  height: 100%;
   object-fit: cover;
   aspect-ratio: 9 / 10;
   border-radius: 2em;
@@ -955,6 +957,28 @@ img.override-image {
 .dropdown {
   position: absolute;
   z-index: 4;
+}
+
+/*
+ * =====================================
+ * Responsiveness for Laptop Screens.
+ * =====================================
+ */
+
+@media only screen and (max-width: 1368px) {
+  #about-section figure {
+    width: calc(70% + 5vw);
+  }
+
+  #about-section {
+    font-size: 0.95em;
+  }
+}
+
+@media only screen and (max-width: 1279px) and (min-width: 1025px) {
+  #about-section {
+    font-size: 0.9em;
+  }
 }
 
 /*
