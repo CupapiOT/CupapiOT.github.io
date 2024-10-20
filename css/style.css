@@ -978,6 +978,18 @@ img.override-image {
 @media only screen and (max-width: 1279px) and (min-width: 1025px) {
   #about-section {
     font-size: 0.9em;
+    max-height: none;
+  }
+}
+
+@media only screen and (max-width: 1163px) {
+  #about-section {
+    flex-direction: column;
+    height: auto;
+  }
+  
+  #about-section figure > img {
+    aspect-ratio: 16 / 12;
   }
 }
 
