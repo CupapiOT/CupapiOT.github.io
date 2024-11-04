@@ -547,7 +547,10 @@ main * {
   border: 0.06125em solid black;
   border-radius: 2em;
   text-decoration: none;
-  transition: background 0.3s ease, color 0.3s ease, border 0.3s ease;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    border 0.3s ease;
 }
 
 #home-section-extension a:hover {
@@ -698,7 +701,10 @@ main * {
   border: transparent;
   border-radius: 2em;
   text-decoration: none;
-  transition: background 0.3s ease, color 0.3s ease, border 0.3s ease;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    border 0.3s ease;
   font-weight: bold;
 }
 
@@ -798,7 +804,9 @@ main * {
   border-radius: 99em;
   text-decoration: none;
   --animation-timing: 0.3s ease;
-  transition: background var(--animation-timing), color var(--animation-timing),
+  transition:
+    background var(--animation-timing),
+    color var(--animation-timing),
     border var(--animation-timing);
 
   --overriding-image: url("../img/copy-email-button/check-mark-icon.svg");
@@ -967,11 +975,14 @@ img.override-image {
 
 @media only screen and (max-width: 1368px) {
   #about-section figure {
-    width: calc(70% + 5vw);
+    width: 100%;
+    height: 30em;
+    margin: 0;
   }
 
   #about-section {
     font-size: 0.95em;
+    padding: 3em;
   }
 }
 
@@ -987,9 +998,11 @@ img.override-image {
     flex-direction: column;
     height: auto;
   }
-  
+
   #about-section figure > img {
-    aspect-ratio: 16 / 12;
+    aspect-ratio: auto;
+    overflow: clip;
+    overflow-clip-margin: content-box;
   }
 }
 
@@ -1077,8 +1090,11 @@ img.override-image {
     background-color: var(--hamburger-foreground-color);
     border-radius: 999em;
     transform-origin: right center;
-    transition: opacity var(--animation-timing), width var(--animation-timing),
-      transform var(--animation-timing), rotate var(--animation-timing),
+    transition:
+      opacity var(--animation-timing),
+      width var(--animation-timing),
+      transform var(--animation-timing),
+      rotate var(--animation-timing),
       translate var(--animation-timing);
   }
 
