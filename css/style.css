@@ -606,7 +606,7 @@ main * {
 
 #skills-section__tools {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 
 #skills-section p {
@@ -628,7 +628,7 @@ main * {
   display: grid;
   align-self: center;
   grid-template-areas: "description image";
-  grid-template-columns: 1.1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   width: 62.4rem;
   max-width: 95vw;
   column-gap: 5em;
@@ -738,8 +738,6 @@ main * {
   grid-area: about;
   margin-inline: auto;
   margin-top: 5em;
-  /* --central-width: clamp(30rem, 52%, 80rem); */
-  /* width: calc(var(--central-width) + clamp(15rem, 2rem + 18vw, 40rem)); */
   width: 90rem;
   height: auto;
   max-width: 90vw;
@@ -986,7 +984,7 @@ img.override-image {
   }
 }
 
-@media only screen and (max-width: 1279px) and (min-width: 1025px) {
+@media only screen and (max-width: 1279px) {
   #about-section {
     font-size: 0.9em;
     max-height: none;
@@ -1215,9 +1213,11 @@ img.override-image {
   }
 
   .projects-section__item {
+    max-width: var(--central-width);
     display: flex;
     flex-direction: column-reverse;
     row-gap: 1.25em;
+    align-items: center;
   }
 
   .projects-section__item figure {
@@ -1238,7 +1238,6 @@ img.override-image {
     --central-width: 95vw;
     width: var(--central-width);
     height: auto;
-    max-height: none;
     max-width: none;
     padding: clamp(0.8em, 5vw, 1.5em);
     margin-bottom: 9vw;
