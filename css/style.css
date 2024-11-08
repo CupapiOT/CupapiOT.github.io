@@ -968,9 +968,7 @@ img.override-image {
 
 @media only screen and (max-width: 1368px) {
   #about-section figure {
-    width: 100%;
-    height: 30em;
-    margin: 0;
+    width: calc(80% + 5vw);
   }
 
   #about-section {
@@ -992,10 +990,26 @@ img.override-image {
     height: auto;
   }
 
+  #about-section figure {
+    width: 100%;
+    margin: 0;
+    height: 30em;
+  }
+
   #about-section figure > img {
     aspect-ratio: auto;
     overflow: clip;
     overflow-clip-margin: content-box;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  #copy-email-button {
+    width: 100%;
+  }
+
+  #copy-email-button span {
+    translate: 0 150%;
   }
 }
 
@@ -1264,16 +1278,8 @@ img.override-image {
     );
   }
 
-  #copy-email-button {
-    width: 100%;
-  }
-
   #copy-email-button img {
     width: 1.15em;
-  }
-
-  #copy-email-button span {
-    translate: 0 150%;
   }
 
   #about-section ul {
