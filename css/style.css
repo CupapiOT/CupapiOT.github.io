@@ -630,17 +630,16 @@ main * {
   grid-template-areas: "description image";
   grid-template-columns: 1fr 1fr;
   width: 62.4rem;
-  max-width: 95vw;
-  column-gap: 5em;
+  max-width: 90vw;
+  column-gap: min(5vw, 5em);
 }
 
 .projects-section__item figure {
   grid-area: image;
   position: relative;
-  top: 0;
-  margin: 0;
+  margin: 0 0 0 auto;
   padding: 0;
-  width: 30em;
+  width: min(20em + 10vw, 30em);
   height: 100%;
 
   overflow: hidden;
@@ -671,7 +670,7 @@ main * {
 
 .projects-section__item__description h3 {
   font-family: "AvenirNextCyrDemi", "Arial", sans-serif;
-  font-size: 2em;
+  font-size: min(1em + 1vw, 2em);
   line-height: 1;
   margin: 0;
 }
@@ -717,10 +716,6 @@ main * {
     "header"
     "projects"
     "footer-separator";
-}
-
-#projects-section h2 {
-  font-size: 3.5em;
 }
 
 #projects-section__items-container {
