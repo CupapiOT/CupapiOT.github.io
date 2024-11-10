@@ -471,7 +471,7 @@ main * {
 }
 
 #home-section h1 {
-  font-size: min(18vw + 2rem, 24rem);
+  font-size: min(18vw + 2rem, 22rem);
   font-family: "AvenirNextCyrHeavy", "Arial Black", sans-serif;
 
   background-image: var(--gradient);
@@ -522,7 +522,7 @@ main * {
   font-weight: normal;
   margin-left: clamp(0.5em, 6vw, 10em);
   max-width: min(90%, 60ch);
-  font-size: min(max(1.1em, 2vw + 0.75em), 2.5em);
+  font-size: min(max(1.1em, 2vw + 0.75em), 0.5em + 3vmin);
 }
 
 #home-section-extension p {
@@ -568,7 +568,7 @@ main * {
 }
 
 .skills-icon {
-  --icon-length: min(clamp(4em, 9vw + 1em, 8em), 12vh);
+  --icon-length: max(3.75em, min(clamp(4em, 9vw + 1em, 8em), 12vmin));
   width: var(--icon-length);
   height: var(--icon-length);
 }
@@ -967,6 +967,10 @@ img.override-image {
  */
 
 @media only screen and (max-width: 1368px) {
+  #home-section-extension .wrapper {
+    grid-template-rows: 1.75fr 1fr 0.5fr;
+  }
+
   #about-section figure {
     width: calc(80% + 5vw);
   }
@@ -1029,6 +1033,23 @@ img.override-image {
     --central-width: 70vw;
   }
 
+  /* Home Section */
+
+  #home-section__introduction {
+    translate: 0 0;
+  }
+
+  #home-section__introduction h2 {
+    --central-width: 90vw;
+    max-width: var(--central-width);
+  }
+
+  #home-section-extension .wrapper {
+    grid-template-rows: 1.5fr 1fr 0.5fr;
+  }
+
+  /* Projects Section */
+
   .projects-section__horizontal-rule {
     --central-width: 65vw;
     width: var(--central-width);
@@ -1038,7 +1059,7 @@ img.override-image {
     max-width: var(--central-width);
     display: flex;
     flex-direction: column-reverse;
-    row-gap: 1.50em;
+    row-gap: 1.5em;
     align-items: center;
   }
 
