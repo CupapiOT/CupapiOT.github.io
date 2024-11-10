@@ -966,6 +966,7 @@ img.override-image {
  * =====================================
  */
 
+/* This is 768p */
 @media only screen and (max-width: 1366px) {
   #top-nav__links {
     width: 75%;
@@ -985,6 +986,7 @@ img.override-image {
   }
 }
 
+/* This is 720p */
 @media only screen and (max-width: 1280px) {
   #top-nav__links {
     width: 80%;
@@ -1000,6 +1002,7 @@ img.override-image {
   }
 }
 
+/* This is when it looked best for the about section to stack vertically. */
 @media only screen and (max-width: 1163px) {
   #top-nav__links {
     width: 90%;
@@ -1023,7 +1026,9 @@ img.override-image {
   }
 }
 
+/* This is 576p */
 @media only screen and (max-width: 1024px) {
+  /* About Section */
   #copy-email-button {
     width: 100%;
   }
@@ -1034,12 +1039,14 @@ img.override-image {
 }
 
 @media only screen and (max-width: 1024px) and (min-width: 897px) {
+  /* This is for a smoother transition */
   .projects-section__item {
     max-width: 80vw;
     column-gap: min(3vw, 2em);
   }
 }
 
+/* This is 504p */
 @media only screen and (max-width: 896px) {
   #top-nav__links {
     width: 100%;
