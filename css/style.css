@@ -568,7 +568,7 @@ main * {
 }
 
 .skills-icon {
-  --icon-length: clamp(4em, 9vw + 1em, 8em);
+  --icon-length: min(clamp(4em, 9vw + 1em, 8em), 12vh);
   width: var(--icon-length);
   height: var(--icon-length);
 }
@@ -918,7 +918,7 @@ footer {
   font-family: AvenirNextCyrBold, "Arial Black", sans-serif;
   color: #222222;
   margin-inline: 0.4em;
-  font-size: min(1em + 4vw, 3.25em) !important;
+  font-size: min(min(1em + 4vw, 3.25em), 1em + 4vh) !important;
 }
 
 /* IMG-Override handling */
