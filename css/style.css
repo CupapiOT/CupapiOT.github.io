@@ -966,7 +966,11 @@ img.override-image {
  * =====================================
  */
 
-@media only screen and (max-width: 1368px) {
+@media only screen and (max-width: 1366px) {
+  #top-nav__links {
+    width: 75%;
+  }
+
   #home-section-extension .wrapper {
     grid-template-rows: 1.75fr 1fr 0.5fr;
   }
@@ -982,6 +986,10 @@ img.override-image {
 }
 
 @media only screen and (max-width: 1280px) {
+  #top-nav__links {
+    width: 80%;
+  }
+
   .projects-section__item {
     max-width: 70vw;
   }
@@ -993,6 +1001,10 @@ img.override-image {
 }
 
 @media only screen and (max-width: 1163px) {
+  #top-nav__links {
+    width: 90%;
+  }
+
   #about-section {
     flex-direction: column;
     height: auto;
@@ -1029,6 +1041,10 @@ img.override-image {
 }
 
 @media only screen and (max-width: 896px) {
+  #top-nav__links {
+    width: 100%;
+  }
+
   :root {
     --central-width: 70vw;
   }
