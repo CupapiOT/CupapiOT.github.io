@@ -993,7 +993,7 @@ img.override-image {
   }
 
   .projects-section__item {
-    max-width: 70vw;
+    max-width: 75vw;
   }
 
   #about-section {
@@ -1039,7 +1039,6 @@ img.override-image {
 }
 
 @media only screen and (max-width: 1024px) and (min-width: 897px) {
-  /* This is for a smoother transition */
   .projects-section__item {
     max-width: 80vw;
     column-gap: min(3vw, 2em);
@@ -1048,10 +1047,6 @@ img.override-image {
 
 /* This is 504p */
 @media only screen and (max-width: 896px) {
-  #top-nav__links {
-    width: 100%;
-  }
-
   :root {
     --central-width: 70vw;
   }
