@@ -977,7 +977,11 @@ img.override-image {
   }
 }
 
-@media only screen and (max-width: 1279px) {
+@media only screen and (max-width: 1280px) {
+  .projects-section__item {
+    max-width: 70vw;
+  }
+
   #about-section {
     font-size: 0.9em;
     max-height: none;
@@ -1013,6 +1017,45 @@ img.override-image {
   }
 }
 
+@media only screen and (max-width: 1024px) and (min-width: 897px) {
+  .projects-section__item {
+    max-width: 80vw;
+    column-gap: min(3vw, 2em);
+  }
+}
+
+@media only screen and (max-width: 896px) {
+  :root {
+    --central-width: 70vw;
+  }
+
+  .projects-section__horizontal-rule {
+    --central-width: 65vw;
+    width: var(--central-width);
+  }
+
+  .projects-section__item {
+    max-width: var(--central-width);
+    display: flex;
+    flex-direction: column-reverse;
+    row-gap: 1.50em;
+    align-items: center;
+  }
+
+  .projects-section__item figure {
+    width: var(--central-width);
+    box-shadow: 0 0 10px 0 #55555540;
+  }
+
+  .projects-section__item img {
+    aspect-ratio: 16 / 9;
+  }
+
+  .projects-section__item__description h3 {
+    font-size: clamp(1.2em, 4vw + 0.5em, 1.5em);
+  }
+}
+
 /*
  * =====================================
  * Responsiveness for Tablet Screens.
@@ -1045,6 +1088,7 @@ img.override-image {
   }
 
   /* General Styling */
+
   body {
     /* For Footer */
     grid-template-rows: 30fr 0.5fr;
@@ -1223,15 +1267,11 @@ img.override-image {
 
   .projects-section__item {
     max-width: var(--central-width);
-    display: flex;
-    flex-direction: column-reverse;
     row-gap: 1.25em;
-    align-items: center;
   }
 
   .projects-section__item figure {
     width: var(--central-width);
-    box-shadow: 0 0 10px 0 #55555540;
   }
 
   .projects-section__item__description h3 {
