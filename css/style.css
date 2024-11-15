@@ -1006,6 +1006,7 @@ img.override-image {
   #about-section {
     flex-direction: column;
     height: auto;
+    padding: 3em;
   }
 
   #about-section figure {
@@ -1073,16 +1074,21 @@ img.override-image {
     display: flex;
     flex-direction: column-reverse;
     row-gap: 1.5em;
-    align-items: center;
   }
 
   .projects-section__item figure {
+    align-self: center;
+    align-items: center;
     width: var(--central-width);
     box-shadow: 0 0 10px 0 #55555540;
   }
 
   .projects-section__item img {
     aspect-ratio: 16 / 9;
+  }
+
+  .projects-section__item__description {
+    padding-inline: 0.5em;
   }
 
   .projects-section__item__description h3 {
