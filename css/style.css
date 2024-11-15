@@ -976,13 +976,8 @@ img.override-image {
     grid-template-rows: 1.75fr 1fr 0.5fr;
   }
 
-  #about-section figure {
-    width: calc(80% + 5vw);
-  }
-
   #about-section {
     font-size: 0.95em;
-    padding: 3em;
   }
 }
 
@@ -1092,6 +1087,10 @@ img.override-image {
 
   .projects-section__item__description h3 {
     font-size: clamp(1.2em, 4vw + 0.5em, 1.5em);
+  }
+
+  #about-section {
+    padding: 2.5em;
   }
 }
 
