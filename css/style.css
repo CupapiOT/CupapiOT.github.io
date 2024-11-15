@@ -995,6 +995,15 @@ img.override-image {
     font-size: 0.9em;
     max-height: none;
   }
+
+  #skills-section
+    :is(
+      #skills-section__best-skill,
+      #skills-section__other-skills,
+      #skills-section__tools
+    ) {
+    margin-bottom: calc(0.125em + 1vmin);
+  }
 }
 
 /* This is when it looked best for the about section to stack vertically. */
@@ -1024,7 +1033,14 @@ img.override-image {
 
 /* This is 576p */
 @media only screen and (max-width: 1024px) {
+  /* Skills Section */
+
+  #skills-section figure {
+    margin-inline: 1.5em;
+  }
+
   /* About Section */
+
   #copy-email-button {
     width: 100%;
   }
@@ -1316,6 +1332,10 @@ img.override-image {
 
   .projects-section__item figure {
     width: var(--central-width);
+  }
+
+  .projects-section__item__description {
+    padding-inline: 0;
   }
 
   .projects-section__item__description h3 {
