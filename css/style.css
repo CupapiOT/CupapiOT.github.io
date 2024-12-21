@@ -350,7 +350,7 @@ main * {
   position: fixed;
   top: 0;
   width: 100vw;
-  height: var(var(--nav-bar-height));
+  height: var(--nav-bar-height);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1102,23 +1102,30 @@ img.override-image {
 /*
  * =====================================
  * Responsiveness for Tablet Screens.
- * =====================================
+ * ===========5=========================
  */
 
 @media only screen and (max-width: 768px) {
+  :root {
+    --central-width: 80vw;
+  }
+
+  .projects-section__item {
+    max-width: var(--central-width);
+  }
+
+  .projects-section__item :is(figure, img) {
+    width: var(--central-width);
+  }
+
+  #top-nav__links {
+    width: 95%;
+  }
 }
 
-/*
- * =====================================
- * Responsiveness for Mobile Screens.
- * =====================================
- */
-
-@media only screen and (max-width: 480px) {
-  /* Variables */
-
+@media only screen and (max-width: 600px) {
   :root {
-    --central-width: 90vw;
+    --central-width: 85vw;
 
     /* Navigation Bar Variables */
     --bar-width: 45px;
@@ -1128,13 +1135,6 @@ img.override-image {
     --animation-timing: 200ms ease-in-out;
     --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
     --nav-bar-height: 3.5em;
-  }
-
-  /* General Styling */
-
-  body {
-    /* For Footer */
-    grid-template-rows: 30fr 0.5fr;
   }
 
   /* Navigation Bar */
@@ -1261,6 +1261,37 @@ img.override-image {
   .hamburger-menu:has(input:focus-visible)::after,
   .hamburger-menu input:focus-visible {
     box-shadow: 0 0 0 2px #ffa600;
+  }
+
+  /* Projects Section */
+
+  .projects-section__item {
+    max-width: var(--central-width);
+  }
+
+  .projects-section__item :is(figure, img) {
+    width: var(--central-width);
+  }
+}
+
+/*
+ * =====================================
+ * Responsiveness for Mobile Screens.
+ * =====================================
+ */
+
+@media only screen and (max-width: 480px) {
+  /* Variables */
+
+  :root {
+    --central-width: 90vw;
+  }
+
+  /* General Styling */
+
+  body {
+    /* For Footer */
+    grid-template-rows: 30fr 0.5fr;
   }
 
   /* Home Section */
