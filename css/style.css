@@ -1106,11 +1106,16 @@ img.override-image {
  */
 
 @media only screen and (max-width: 768px) {
-  .projects-section__item {
-    max-width: 80vw;
+  :root {
+    --central-width: 80vw;
   }
-  .projects-section__item figure, img {
-    align-self: center;
+
+  .projects-section__item {
+    max-width: var(--central-width);
+  }
+
+  .projects-section__item :is(figure, img) {
+    width: var(--central-width);
   }
 
   #top-nav__links {
@@ -1120,6 +1125,8 @@ img.override-image {
 
 @media only screen and (max-width: 600px) {
   :root {
+    --central-width: 85vw;
+
     /* Navigation Bar Variables */
     --bar-width: 45px;
     --bar-height: 5px;
@@ -1254,6 +1261,16 @@ img.override-image {
   .hamburger-menu:has(input:focus-visible)::after,
   .hamburger-menu input:focus-visible {
     box-shadow: 0 0 0 2px #ffa600;
+  }
+
+  /* Projects Section */
+
+  .projects-section__item {
+    max-width: var(--central-width);
+  }
+
+  .projects-section__item :is(figure, img) {
+    width: var(--central-width);
   }
 }
 
