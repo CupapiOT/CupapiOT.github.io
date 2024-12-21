@@ -319,7 +319,7 @@ body {
   grid-template-areas:
     "main"
     "footer";
-  grid-template-rows: 30fr 1fr;
+  grid-template-rows: 30fr 0.5fr;
   background-color: var(--background-color);
 
   -webkit-font-smoothing: antialiased;
@@ -863,7 +863,8 @@ main * {
 footer {
   grid-area: footer;
   justify-self: center;
-  align-self: center;
+  align-self: end;
+  margin-bottom: -1em;
   width: calc(2 / 3 * 100%);
 
   letter-spacing: -1px;
