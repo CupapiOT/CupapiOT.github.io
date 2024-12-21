@@ -282,31 +282,6 @@ textarea {
   --text-shadow: 1px 1px 10px #ffffff80;
 }
 
-@font-face {
-  font-family: AvenirNextCyrMedium;
-  src: url("../fonts/AvenirNextCyr-Medium.woff2");
-}
-
-@font-face {
-  font-family: AvenirNextCyrHeavy;
-  src: url("../fonts/AvenirNextCyr-Heavy.woff2");
-}
-
-@font-face {
-  font-family: AvenirNextCyrDemi;
-  src: url("../fonts/AvenirNextCyr-Demi.woff2");
-}
-
-@font-face {
-  font-family: AvenirNextCyrBold;
-  src: url("../fonts/AvenirNextCyr-Bold.woff2");
-}
-
-@font-face {
-  font-family: Inconsolata;
-  src: url("../fonts/Inconsolata.woff2");
-}
-
 /*
  * General Styling
  */
@@ -314,7 +289,8 @@ textarea {
 body {
   margin: 0;
   padding: 0;
-  font-family: "AvenirNextCyrMedium", "Arial", sans-serif;
+  font-family: "Poppins", "Arial", sans-serif;
+  font-weight: 400;
   display: grid;
   grid-template-areas:
     "main"
@@ -420,7 +396,8 @@ main * {
   align-self: flex-start;
   margin: auto auto auto 1em;
 
-  font-family: AvenirNextCyrBold, "Arial Black", sans-serif;
+  font-family: "Poppins", "Arial Black", sans-serif;
+  font-weight: 700;
   background-image: var(--gradient);
   background-clip: text;
   background-size: 400% 400%;
@@ -472,7 +449,8 @@ main * {
 
 #home-section h1 {
   font-size: min(18vw + 2rem, 22rem);
-  font-family: "AvenirNextCyrHeavy", "Arial Black", sans-serif;
+  font-family: "Poppins", "Arial Black", sans-serif;
+  font-weight: 900;
 
   background-image: var(--gradient);
   background-clip: text;
@@ -669,7 +647,8 @@ main * {
 }
 
 .projects-section__item__description h3 {
-  font-family: "AvenirNextCyrDemi", "Arial", sans-serif;
+  font-family: "Poppins", "Arial", sans-serif;
+  font-weight: 500;
   font-size: min(1em + 1vw, 2em);
   line-height: 1;
   margin: 0;
@@ -770,7 +749,8 @@ main * {
   font-size: 2.5em;
   margin-bottom: 0;
   margin-top: 1.5vw;
-  font-family: "AvenirNextCyrBold", "Arial Black", sans-serif;
+  font-family: "Poppins", "Arial Black", sans-serif;
+  font-weight: 500;
 }
 
 #about-section p {
@@ -791,7 +771,8 @@ main * {
 
   color: black;
   font-size: 1em;
-  font-family: "AvenirNextCyrBold", "Arial Black", sans-serif;
+  font-family: "Poppins", "Arial Black", sans-serif;
+  font-weight: 700;
 
   border: 2px solid black;
   border-radius: 99em;
@@ -916,7 +897,8 @@ footer {
 }
 
 .text-between-line {
-  font-family: AvenirNextCyrBold, "Arial Black", sans-serif;
+  font-family: "Poppins", "Arial Black", sans-serif;
+  font-weight: 700;
   color: #222222;
   margin-inline: 0.4em;
   font-size: min(min(1em + 4vw, 3.25em), 1em + 4vh) !important;
