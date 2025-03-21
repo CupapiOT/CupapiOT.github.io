@@ -561,7 +561,7 @@ main * {
 
 #skills-section
   :is(
-    #skills-section__best-skill,
+    #skills-section__best-skills,
     #skills-section__other-skills,
     #skills-section__tools
   ) {
@@ -570,10 +570,10 @@ main * {
   margin-bottom: calc(0.25em + 2vw);
 }
 
-#skills-section__best-skill {
-  margin-top: 2em;
+#skills-section__best-skills {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 #skills-section__other-skills {
@@ -652,6 +652,14 @@ main * {
   font-size: min(1em + 1vw, 2em);
   line-height: 1;
   margin: 0;
+}
+
+.projects-section__item__description h3 a {
+  color: inherit;
+}
+
+.projects-section__item__description h3 a:hover {
+  text-decoration: underline;
 }
 
 .projects-section__item__description p {
@@ -981,7 +989,7 @@ img.override-image {
 
   #skills-section
     :is(
-      #skills-section__best-skill,
+      #skills-section__best-skills,
       #skills-section__other-skills,
       #skills-section__tools
     ) {
@@ -1324,7 +1332,9 @@ img.override-image {
 
   /* Skills Section */
 
-  #skills-section__other-skills {
+  #skills-section__best-skills,
+  #skills-section__other-skills,
+  #skills-section__tools {
     max-width: 90vw;
   }
 
