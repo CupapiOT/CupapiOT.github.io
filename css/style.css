@@ -652,6 +652,7 @@ main * {
   font-size: min(1em + 1vw, 2em);
   line-height: 1;
   margin: 0;
+  margin-bottom: 0.5em;
 }
 
 .projects-section__item__description h3 a {
