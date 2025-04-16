@@ -921,6 +921,7 @@ img.override-image {
 /* Standard Link Hover */
 
 .standard-link-hover {
+  cursor: pointer;
   position: relative;
 }
 

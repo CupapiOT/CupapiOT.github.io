@@ -101,3 +101,7 @@ copyEmailButtonEventListener(
   copyEmailButtonImg,
   copyEmailButtonPopUp
 );
+
+
+const phoneNumberLink = document.getElementById("phone-number-link");
+phoneNumberLink.addEventListener("click", () => copyTextToClipboard("85242711717"));
