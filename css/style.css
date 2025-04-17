@@ -771,6 +771,13 @@ main * {
   color: black;
 }
 
+#about-section img {
+  --icon-length: 1.5em;
+  width: var(--icon-length);
+  height: var(--icon-length);
+  margin-right: 0.125em;
+}
+
 #copy-email-button {
   display: flex;
   align-items: center;
