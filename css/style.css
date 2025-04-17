@@ -491,7 +491,7 @@ main * {
 }
 
 #home-section-extension > .wrapper {
-  max-width: 95%;
+  max-width: 85%;
   display: grid;
   grid-template-rows: 2fr 1fr 0.5fr;
 }
@@ -500,12 +500,12 @@ main * {
   font-weight: normal;
   margin-left: clamp(0.5em, 6vw, 10em);
   max-width: min(90%, 60ch);
-  font-size: min(max(1.1em, 2vw + 0.75em), 0.5em + 3vmin);
+  font-size: min(max(1em, 2vw + 0.5em), 0.25em + 3vmin);
 }
 
 #home-section-extension p {
   max-width: min(70%, 45ch);
-  font-size: min(max(1.1em, 1vw + 0.5em), 1.5em);
+  font-size: min(max(1em, 1vw + 0.5em), 1.5em);
   text-align: right;
   margin-right: 6vw;
   margin-left: auto;
@@ -549,6 +549,7 @@ main * {
   --icon-length: max(3.75em, min(clamp(4em, 9vw + 1em, 8em), 12vmin));
   width: var(--icon-length);
   height: var(--icon-length);
+  margin-inline: -1em;
 }
 
 #skills-section {
@@ -565,26 +566,12 @@ main * {
     #skills-section__other-skills,
     #skills-section__tools
   ) {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   margin-bottom: calc(0.25em + 2vw);
-}
-
-#skills-section__best-skills {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-#skills-section__other-skills {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-#skills-section__tools {
-  display: flex;
-  flex-direction: row;
 }
 
 #skills-section p {
@@ -1017,7 +1004,7 @@ img.override-image {
   }
 
   #home-section-extension .wrapper {
-    grid-template-rows: 1.75fr 1fr 0.5fr;
+    max-width: 95%;
   }
 
   #about-section {
