@@ -102,7 +102,6 @@ copyEmailButtonEventListener(
   copyEmailButtonPopUp,
 );
 
-
 const phoneNumberLink = document.getElementById("phone-number-link");
 phoneNumberLink.addEventListener("click", () =>
   copyTextToClipboard("85242711717"),
@@ -124,3 +123,31 @@ hiddenElementsForScroll.forEach((element) =>
   animateOnScrollObserver.observe(element),
 );
 
+//   Elements in a list that look cooler when staggered.
+
+/**
+ * Adds staggered transition delays to a set child of elements. Note that this only
+ * really applies staggered animations if the children have the class that makes them
+ * animated.
+ *
+ * @param {string} containerSelector - The CSS selector for the container (one container).
+ * @param {string} childrenSelector - The CSS selector for the children.
+ * @param {number} delayStepsMs - Delay between each element in milliseconds.
+ */
+function applyStaggeredTransitions(
+  containerSelector,
+  childrenSelector,
+  delayStepsMs = 100,
+) {
+  const container = document.querySelector(containerSelector);
+  if (!container) return;
+
+  const children = container.querySelectorAll(childrenSelector);
+  children.forEach((element, id) => {
+    element.style.transitionDelay = `${id * delayStepsMs}ms`;
+  });
+}
+
+applyStaggeredTransitions("#skills-section__best-skills", "figure");
+applyStaggeredTransitions("#skills-section__other-skills", "figure", 50);
+applyStaggeredTransitions("#skills-section__tools", "figure");
