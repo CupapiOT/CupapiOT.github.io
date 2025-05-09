@@ -903,6 +903,27 @@ footer {
  * Utility Classes
  */
 
+/* Animation-on-scroll */
+
+.hidden-before-scroll {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-50%);
+  transition: all 0.5s;
+}
+
+.show-after-scroll {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+@media (prefers-reduced-motion) {
+  .hidden-before-scroll {
+    transition: none;
+  }
+}
+
 /* Glass effect */
 
 .glass {

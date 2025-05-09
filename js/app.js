@@ -56,15 +56,15 @@ function copyTextToClipboard(text) {
 function temporarilyOverrideImgAndStyle(milliseconds = 3000, ...elements) {
   applyActionToElements(
     (element) => element.classList.add("override-image"),
-    ...elements
+    ...elements,
   );
   setTimeout(
     () =>
       applyActionToElements(
         (element) => element.classList.remove("override-image"),
-        ...elements
+        ...elements,
       ),
-    milliseconds
+    milliseconds,
   );
 }
 
@@ -72,7 +72,7 @@ function copyEmailButtonEventListener(
   action,
   copyEmailButton,
   copyEmailButtonImg,
-  copyEmailButtonPopUp
+  copyEmailButtonPopUp,
 ) {
   copyEmailButton.addEventListener(action, () => {
     copyTextToClipboard("hellomarvelorleans@gmail.com");
@@ -80,7 +80,7 @@ function copyEmailButtonEventListener(
       1500,
       copyEmailButton,
       copyEmailButtonImg,
-      copyEmailButtonPopUp
+      copyEmailButtonPopUp,
     );
   });
 }
@@ -93,15 +93,34 @@ copyEmailButtonEventListener(
   "click",
   copyEmailButton,
   copyEmailButtonImg,
-  copyEmailButtonPopUp
+  copyEmailButtonPopUp,
 );
 copyEmailButtonEventListener(
   "touchstart",
   copyEmailButton,
   copyEmailButtonImg,
-  copyEmailButtonPopUp
+  copyEmailButtonPopUp,
 );
 
 
 const phoneNumberLink = document.getElementById("phone-number-link");
-phoneNumberLink.addEventListener("click", () => copyTextToClipboard("85242711717"));
+phoneNumberLink.addEventListener("click", () =>
+  copyTextToClipboard("85242711717"),
+);
+
+// Animation Logic
+
+//   General elements that reveal normally.
+const animateOnScrollObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    entry.target.classList.toggle("show-after-scroll", entry.isIntersecting);
+  });
+});
+const hiddenElementsForScroll = document.querySelectorAll(
+  ".hidden-before-scroll",
+);
+
+hiddenElementsForScroll.forEach((element) =>
+  animateOnScrollObserver.observe(element),
+);
+
