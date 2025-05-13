@@ -151,3 +151,4 @@ function applyStaggeredTransitions(
 applyStaggeredTransitions("#skills-section__best-skills", "figure");
 applyStaggeredTransitions("#skills-section__other-skills", "figure", 50);
 applyStaggeredTransitions("#skills-section__tools", "figure");
+applyStaggeredTransitions("#about-section ul", "li");
